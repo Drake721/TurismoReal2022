@@ -1,0 +1,6 @@
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\TurismoReal2022.csproj.AssemblyReference.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\TurismoReal2022.csproj.SuggestedBindingRedirects.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\MainWindow.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\App.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\TurismoReal2022_MarkupCompile.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\TurismoReal2022_MarkupCompile.lref

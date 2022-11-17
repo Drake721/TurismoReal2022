@@ -1,0 +1,325 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MaterialXAMLDialogs</name>
+    </assembly>
+    <members>
+        <member name="P:MaterialXAMLDialogs.AlertDialog.Result">
+            <summary>
+            The result of the dialog Show method.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.AlertDialog.AdditionalOptionChecked">
+            <summary>
+            Determines the state of the additional checkBox after the dialog is closed.
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.AlertDialog.#ctor(MaterialXAMLDialogs.AlertDialogConfiguration)">
+            <summary>
+            A dialog to use when an action requires user interaction or just display a warning or information.
+            </summary>
+            <param name="configuration">Configure the look and properties of the dialog</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.AlertDialog.Show(System.String)">
+            <summary>
+            Shows the dialog.
+            </summary>
+            <param name="dialogHosId">The Identifier of the DialogHost instance where the dialog should be shown</param>
+            <returns>The result of the dialog chosen by the user</returns>
+        </member>
+        <member name="T:MaterialXAMLDialogs.AlertDialogConfiguration">
+            <summary>
+            A configuration class to set the properties of a Dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.AlertDialogConfiguration.DialogButtons">
+            <summary>
+            The buttons which should be displayed for the user to choose from, they also define the possible DialogResults.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.AlertDialogConfiguration.ShowAdditionalOption">
+            <summary>
+            Determines whether an additional checkBox should be displayed for the user.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.AlertDialogConfiguration.IsAdditionalOptionChecked">
+            <summary>
+            Determines the default state of the additional CheckBox.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.AlertDialogConfiguration.AdditionalOptionText">
+            <summary>
+            Get or Set the additional checkBox text.
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Buttons.AbortRetryIgnoreButtons">
+            <summary>
+            Interaction logic for AbortRetryIgnoreButtons.xaml
+            </summary>
+            <summary>
+            AbortRetryIgnoreButtons
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Buttons.AbortRetryIgnoreButtons.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Buttons.OKButtons">
+            <summary>
+            Interaction logic for OKButtons.xaml
+            </summary>
+            <summary>
+            OKButtons
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Buttons.OKButtons.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Buttons.OKCancelButtons">
+            <summary>
+            Interaction logic for OKCancelButtons.xaml
+            </summary>
+            <summary>
+            OKCancelButtons
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Buttons.OKCancelButtons.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Buttons.RetryCancelButtons">
+            <summary>
+            Interaction logic for RetryCancelButtons.xaml
+            </summary>
+            <summary>
+            RetryCancelButtons
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Buttons.RetryCancelButtons.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Buttons.YesNoButtons">
+            <summary>
+            Interaction logic for YesNoButtons.xaml
+            </summary>
+            <summary>
+            YesNoButtons
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Buttons.YesNoButtons.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Buttons.YesNoCancelButtons">
+            <summary>
+            Interaction logic for YesNoCancelButtons.xaml
+            </summary>
+            <summary>
+            YesNoCancelButtons
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Buttons.YesNoCancelButtons.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Dialogs.AlertView">
+            <summary>
+            Interaction logic for Alert.xaml
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Dialogs.AlertView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Dialogs.IndeterminateView">
+            <summary>
+            Interaction logic for IndeterminateView.xaml
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Dialogs.IndeterminateView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Dialogs.ProgressView">
+            <summary>
+            Interaction logic for ProgressView.xaml
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Dialogs.ProgressView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:MaterialXAMLDialogs.Dialogs.SelectionView">
+            <summary>
+            Interaction logic for SelectionView.xaml
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Dialogs.SelectionView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.Framework.DialogBase`1.Close">
+            <summary>
+            Closes the dialog.
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.IndeterminateDialog.#ctor">
+            <summary>
+            A dialog to use to show indeterminate progress bar and block the user for interacting with your application.
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.IndeterminateDialog.Show(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            Shows the dialog.
+            </summary>
+            <param name="dialogHostId">The Identifier of the DialogHost instance where the dialog should be shown</param>
+            <param name="title">The title text to display</param>
+            <param name="supportingText">The body text to display</param>
+            <param name="showTitleSeparator">Determines whether a separator between the Title and content of the Dialog should be displayed.</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.IndeterminateDialog.UpdateText(System.String,System.String)">
+            <summary>
+            Updates the title and supporting text.
+            </summary>
+            <param name="title">The title text to display</param>
+            <param name="supportingText">The body text to display</param>
+        </member>
+        <member name="P:MaterialXAMLDialogs.Interfaces.DialogConfigurations.IDialogConfiguration.Title">
+            <summary>
+            Get or Set the Title text to display. 
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.Interfaces.DialogConfigurations.IDialogConfiguration.ShowTitleSeparator">
+            <summary>
+            Determines whether a separator between the Title and content of the Dialog should be displayed.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.Interfaces.IDisplayIcon.IconBrush">
+            <summary>
+            The Icon brush color.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.Interfaces.IDisplayIcon.IconKind">
+            <summary>
+            The Icon kind to display.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.Interfaces.IDisplayIcon.ShowIcon">
+            <summary>
+            Determines the visibility of the icon. 
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.Interfaces.IDisplaySupportingText.SupportingText">
+            <summary>
+            Get or Set the supporting text, this is the text displayed in the dialog body.
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.ProgressDialog.#ctor(MaterialXAMLDialogs.ProgressDialogConfiguration)">
+            <summary>
+            A dialog to show the progress of some operation.
+            </summary>
+            <param name="configuration">Configure the look and properties of the dialog</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.ProgressDialog.Show(System.String,System.Threading.CancellationTokenSource)">
+            <summary>
+            Shows the dialog.
+            </summary>
+            <param name="dialogHostId">The Identifier of the DialogHost instance where the dialog should be shown</param>
+            <param name="cancellationTokenSource">A cancellation token to use when the user cancels the operation</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.ProgressDialog.Close(System.Boolean)">
+            <summary>
+            Closes the dialog.
+            </summary>
+            <param name="cancel">Determines whether the operation should be canceled when closing this dialog</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.ProgressDialog.UpdateDialog(System.Boolean,System.Boolean)">
+            <summary>
+            Updates the progress bar state and visibility of the Cancel button
+            </summary>
+            <param name="cancellable">Determines whether a Cancel button should displayed for the user to cancel the process</param>
+            <param name="isIndeterminate">Determines the state of the progress bar</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.ProgressDialog.UpdateText(System.String,System.String)">
+            <summary>
+            Updates the title and supporting text
+            </summary>
+            <param name="title">The title text to display</param>
+            <param name="supportingText">The body text to display</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.ProgressDialog.ShowProgress(System.Double,System.String)">
+            <summary>
+            Updates the progress bar value and the progress text
+            </summary>
+            <param name="progress">The value to update the progress bar</param>
+            <param name="progressText">The progress text, which will be displayed next to the progress bar</param>
+        </member>
+        <member name="T:MaterialXAMLDialogs.ProgressDialogConfiguration">
+            <summary>
+            A configuration class to set the properties of a Dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.ProgressDialogConfiguration.IsIndeterminate">
+            <summary>
+            Determines the state of the progress bar.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.ProgressDialogConfiguration.Cancellable">
+            <summary>
+            Determines whether a Cancel button should displayed for the user to cancel the process.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.ProgressDialogConfiguration.MaxWidth">
+            <summary>
+            Get or Set the MaxWidth of the dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.ProgressDialogConfiguration.MinWidth">
+            <summary>
+            Get or Set the MinWidth of the dialog.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.SelectionDialog`1.Result">
+            <summary>
+            The selected item value.
+            </summary>
+        </member>
+        <member name="P:MaterialXAMLDialogs.SelectionDialog`1.Items">
+            <summary>
+            The items to display for the user to choose from.
+            </summary>
+        </member>
+        <member name="M:MaterialXAMLDialogs.SelectionDialog`1.#ctor(MaterialXAMLDialogs.SelectionDialogConfiguration)">
+            <summary>
+            A dialog to allow the user to choose an item from multiple items.
+            </summary>
+            <param name="configuration">Configure the look and properties of the dialog</param>
+        </member>
+        <member name="M:MaterialXAMLDialogs.SelectionDialog`1.Show(System.String,System.Collections.Generic.IEnumerable{`0},System.Func{`0,System.String})">
+            <summary>
+            Shows the dialog.
+            </summary>
+            <param name="dialogHosId">The Identifier of the DialogHost instance where the dialog should be shown</param>
+            <param name="items"> The items to display for the user to choose from</param>
+            <param name="displayMemberValue">A delegate which will be called for each item to determine the display value of the item</param>
+            <returns></returns>
+        </member>
+        <member name="T:MaterialXAMLDialogs.SelectionDialogConfiguration">
+            <summary>
+            A configuration class to set the properties of a Dialog.
+            </summary>
+        </member>
+    </members>
+</doc>

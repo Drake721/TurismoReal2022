@@ -1,0 +1,16 @@
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Release\TurismoReal2022.exe.config
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Release\TurismoReal2022.exe
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Release\TurismoReal2022.pdb
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.csproj.AssemblyReference.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.csproj.SuggestedBindingRedirects.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\MainWindow.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\App.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022_MarkupCompile.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022_MarkupCompile.lref
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\MainWindow.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.g.resources
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.Properties.Resources.resources
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.csproj.GenerateResource.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.csproj.CoreCompileInputs.cache
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.exe
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Release\TurismoReal2022.pdb

@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "tarea-TurismoReal2022",
+      "appliesTo": "TurismoReal2022.sln",
+      "type": "launch"
+    }
+  ]
+}
