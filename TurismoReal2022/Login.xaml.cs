@@ -1,16 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CapaNegocio;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace TurismoReal2022
 {
@@ -39,18 +30,34 @@ namespace TurismoReal2022
         {
             if(txtUser.Text !="" && txtPass.Password != "")
             {
+                Logins(txtUser.Text, txtPass.Password);
                 MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
             }
             else
             {
                 MessageBox.Show("Los campos no pueden quedar vacios!");
             }
         }
-        void Logins(string usuario, string clave)
+        void Logins(string email, string clave)
         {
-            
+            CN_Usuario cn = new CN_Usuario();
+            var a=cn.Login(email, clave);
+            if (a.Id_usuario > 0 && a.Idcargo == 1)
+            {
+                Properties.Settings.Default.ID_USUARIO = a.Id_usuario;
+                Properties.Settings.Default.IDCARGO = a.Idcargo;
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
+            else if (a.Idcargo != 1)
+            {
+                MessageBox.Show("El usuario debe ser Administrador");
+            }
+            else
+            {
+                MessageBox.Show("Credenciales o Usuario incorrecto! Reintente");
+            }
         }
 
         private void txtUser_TextChanged(object sender, TextChangedEventArgs e)

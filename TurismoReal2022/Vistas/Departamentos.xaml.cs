@@ -10,6 +10,7 @@ namespace TurismoReal2022.Vistas
     public partial class Departamentos : UserControl
     {
         readonly CN_Departamento objeto_CN_Departamento = new CN_Departamento();
+
         #region inicial
         public Departamentos()
         {
@@ -17,13 +18,15 @@ namespace TurismoReal2022.Vistas
             CargarDatos();
         }
         #endregion
-        #region cargar usuarios
+
+        #region cargar Dpto
         void CargarDatos()
         {
             GridDatos.ItemsSource = objeto_CN_Departamento.CargarDepartamento().DefaultView;
 
         }
         #endregion
+
         private void Agregar(object sender, RoutedEventArgs e)
         {
             AgregarDPTO ventana = new AgregarDPTO();

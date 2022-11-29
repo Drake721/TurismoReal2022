@@ -17,7 +17,7 @@ namespace CapaDatos
             SqlCommand com = new SqlCommand()
             {
                 Connection = con.AbrirConexion(),
-                CommandText = "SP_R_IDREGION",
+                CommandText = "SP_R_idregion",
                 CommandType = CommandType.StoredProcedure,
 
             };
@@ -33,7 +33,7 @@ namespace CapaDatos
         #region NombreComuna
         public CE_Region NOMBRE_REGION(int ID_REGION)
         {
-            SqlDataAdapter da = new SqlDataAdapter("SP_R_CargarNombreRegion", con.AbrirConexion());
+            SqlDataAdapter da = new SqlDataAdapter("SP_R_cargarnombreregion", con.AbrirConexion());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
             da.SelectCommand.Parameters.Add("@ID_REGION", SqlDbType.Int).Value = ID_REGION;
             DataSet ds = new DataSet();
@@ -55,7 +55,7 @@ namespace CapaDatos
             SqlCommand com = new SqlCommand()
             {
                 Connection = con.AbrirConexion(),
-                CommandText = "SP_R_CargarRegion",
+                CommandText = "SP_R_cargarregion",
                 CommandType = CommandType.StoredProcedure,
             };
             SqlDataReader reader = com.ExecuteReader();

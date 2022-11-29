@@ -46,8 +46,10 @@
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_Departamento.cs" />
     <Compile Include="CD_Disponibilidad.cs" />
+    <Compile Include="CD_Mantencion.cs" />
     <Compile Include="CD_Region.cs" />
     <Compile Include="CD_Usuario.cs" />
+    <Compile Include="CD_Vehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

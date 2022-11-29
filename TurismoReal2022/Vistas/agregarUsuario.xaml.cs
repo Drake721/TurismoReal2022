@@ -28,9 +28,8 @@ namespace TurismoReal2022.Vistas
             Content = new Usuarios();
         }
         #endregion
+
         #region cargar cargos
-
-
         void CargarCB()
         {
             List<string> Cargo = objeto_CN_CARGO.ListarCargos();
@@ -40,6 +39,7 @@ namespace TurismoReal2022.Vistas
             }
         }
         #endregion
+
         #region VALIDAR CAMPOS VACIOS
         public bool camposLlenos()
         {
@@ -55,8 +55,8 @@ namespace TurismoReal2022.Vistas
         }
         #endregion 
         #region crud usuarios
-        public int ID_USUARIO;
-        public string PATRON = "ENCRIPTA";
+        public int id_usuario;
+        public string patron = "ENCRIPTA";
 
         #region crear
         private void Crear(object sender, RoutedEventArgs e)
@@ -64,16 +64,16 @@ namespace TurismoReal2022.Vistas
             if(camposLlenos()== true && tbClave.Text !="")
             {
                 int Cargo = objeto_CN_CARGO.ID(cbCargo.Text);
-                objeto_CE_Usuario.EMAIL = tbCorreo.Text;
-                objeto_CE_Usuario.CLAVE = tbClave.Text;
-                objeto_CE_Usuario.CELULAR = int.Parse(tbCelular.Text);
-                objeto_CE_Usuario.RUT = tbRut.Text;
-                objeto_CE_Usuario.NOMBRES = tbNombres.Text;
-                objeto_CE_Usuario.APELLIDOPATERNO = tbApellido.Text;
-                objeto_CE_Usuario.APELLIDOMATERNO = tbsegApellido.Text;
-                objeto_CE_Usuario.IMG = data;
-                objeto_CE_Usuario.IDCARGO = Cargo;
-                objeto_CE_Usuario.PATRON = PATRON;
+                objeto_CE_Usuario.Email = tbCorreo.Text;
+                objeto_CE_Usuario.Clave = tbClave.Text;
+                objeto_CE_Usuario.Celular = int.Parse(tbCelular.Text);
+                objeto_CE_Usuario.Rut = tbRut.Text;
+                objeto_CE_Usuario.Nombres = tbNombres.Text;
+                objeto_CE_Usuario.Apellidopaterno = tbApellido.Text;
+                objeto_CE_Usuario.Apellidomaterno = tbsegApellido.Text;
+                objeto_CE_Usuario.Img = data;
+                objeto_CE_Usuario.Idcargo = Cargo;
+                objeto_CE_Usuario.Patron = patron;
 
                 objeto_CN_Usuario.Insertar(objeto_CE_Usuario);
                 Content = new Usuarios();
@@ -88,18 +88,18 @@ namespace TurismoReal2022.Vistas
         #region cosultas
         public void Consultar()
         {
-            var a = objeto_CN_Usuario.Consultar(ID_USUARIO);
-            tbCorreo.Text = a.EMAIL.ToString();
-            tbCelular.Text = a.CELULAR.ToString();
-            tbRut.Text = a.RUT.ToString();
-            tbNombres.Text = a.NOMBRES.ToString();
-            tbApellido.Text = a.APELLIDOPATERNO.ToString();
-            tbsegApellido.Text = a.APELLIDOMATERNO.ToString();
-            var b = objeto_CN_CARGO.NOMBRECARGO(a.IDCARGO);
-            cbCargo.Text = b.NOMBRECARGO;
+            var a = objeto_CN_Usuario.Consultar(id_usuario);
+            tbCorreo.Text = a.Email.ToString();
+            tbCelular.Text = a.Celular.ToString();
+            tbRut.Text = a.Rut.ToString();
+            tbNombres.Text = a.Nombres.ToString();
+            tbApellido.Text = a.Apellidopaterno.ToString();
+            tbsegApellido.Text = a.Apellidomaterno.ToString();
+            var b = objeto_CN_CARGO.nombrecargo(a.Idcargo);
+            cbCargo.Text = b.Nombrecargo;
 
             ImageSourceConverter imgs = new ImageSourceConverter();
-            imagen.Source = (ImageSource)imgs.ConvertFrom(a.IMG);
+            imagen.Source = (ImageSource)imgs.ConvertFrom(a.Img);
 
         }
         #endregion
@@ -108,17 +108,16 @@ namespace TurismoReal2022.Vistas
         {
             if(camposLlenos()==true)
             {
-                //pendiente
                 int Cargo = objeto_CN_CARGO.ID(cbCargo.Text);
 
-                objeto_CE_Usuario.ID_USUARIO = ID_USUARIO;
-                objeto_CE_Usuario.EMAIL = tbCorreo.Text;
-                objeto_CE_Usuario.CELULAR = int.Parse(tbCelular.Text);
-                objeto_CE_Usuario.RUT = tbRut.Text;
-                objeto_CE_Usuario.NOMBRES = tbNombres.Text;
-                objeto_CE_Usuario.APELLIDOPATERNO = tbApellido.Text;
-                objeto_CE_Usuario.APELLIDOMATERNO = tbsegApellido.Text;
-                objeto_CE_Usuario.IDCARGO = Cargo;
+                objeto_CE_Usuario.Id_usuario = id_usuario;
+                objeto_CE_Usuario.Email = tbCorreo.Text;
+                objeto_CE_Usuario.Celular = int.Parse(tbCelular.Text);
+                objeto_CE_Usuario.Rut = tbRut.Text;
+                objeto_CE_Usuario.Nombres = tbNombres.Text;
+                objeto_CE_Usuario.Apellidopaterno = tbApellido.Text;
+                objeto_CE_Usuario.Apellidomaterno = tbsegApellido.Text;
+                objeto_CE_Usuario.Idcargo = Cargo;
                 objeto_CN_Usuario.ActualizarDatos(objeto_CE_Usuario);
                 Content = new Usuarios();
             }
@@ -128,9 +127,9 @@ namespace TurismoReal2022.Vistas
             }
             if (tbClave.Text != "")
             {
-                objeto_CE_Usuario.ID_USUARIO = ID_USUARIO;
-                objeto_CE_Usuario.CLAVE = tbClave.Text;
-                objeto_CE_Usuario.PATRON = PATRON;
+                objeto_CE_Usuario.Id_usuario = id_usuario;
+                objeto_CE_Usuario.Clave = tbClave.Text;
+                objeto_CE_Usuario.Patron = patron;
 
                 objeto_CN_Usuario.ActualizarClave(objeto_CE_Usuario);
                 Content = new Usuarios();
@@ -138,8 +137,8 @@ namespace TurismoReal2022.Vistas
             }
             if (imagenSubida==true)
             {
-                objeto_CE_Usuario.ID_USUARIO = ID_USUARIO;
-                objeto_CE_Usuario.IMG = data;
+                objeto_CE_Usuario.Id_usuario = id_usuario;
+                objeto_CE_Usuario.Img = data;
 
                 objeto_CN_Usuario.ActualizarIMG(objeto_CE_Usuario);
 
@@ -150,7 +149,7 @@ namespace TurismoReal2022.Vistas
         #region Eliminar
         private void Eliminar(object sender, RoutedEventArgs e)
         {
-            objeto_CE_Usuario.ID_USUARIO = ID_USUARIO;
+            objeto_CE_Usuario.Id_usuario = id_usuario;
 
             objeto_CN_Usuario.Eliminar(objeto_CE_Usuario);
 

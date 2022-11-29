@@ -48,3 +48,15 @@ C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\Cap
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\CapaDatos.pdb
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\AgregarDPTO.g.cs
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\AgregarDPTO.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Inventario.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Mantenimiento.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Inventario.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Mantenimiento.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Cargo.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Estado.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Vehiculo.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Cargo.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Estado.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Vehiculo.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearMantenimiento.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearMantenimiento.baml

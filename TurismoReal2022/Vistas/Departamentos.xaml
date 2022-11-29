@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TurismoReal2022.Vistas"
              mc:Ignorable="d"
-             Height="500"
-             Width="675"
+             Height="509"
+             Width="693"
              Background="Transparent">
 
     <UserControl.Resources>
@@ -218,9 +218,9 @@
         <!--#endRegion -->
     </UserControl.Resources>
 
-    <Border CornerRadius="12"                       
-            BorderThickness="2"
-            Opacity="0.95">
+    <Border CornerRadius="5"                       
+            BorderThickness="0.4"
+            Opacity="1">
         <Border.Background>
             <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
                 <GradientStop Color="#FF2B1A16" Offset="0"/>
@@ -229,7 +229,7 @@
         </Border.Background>
 
         <Border.BorderBrush>
-            <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <LinearGradientBrush StartPoint="0,1.5" EndPoint="1,1">
                 <GradientStop Color="Red" Offset="0"/>
                 <GradientStop Color="Red" Offset="0.498"/>
             </LinearGradientBrush>
@@ -370,7 +370,7 @@
                                             Foreground="White"
                                             Style="{DynamicResource ButtonBUSCAR}"
                                             Click="ConsultarDPTO"
-                                            CommandParameter="{Binding ID_DPTO}"/>
+                                            CommandParameter="{Binding id_dpto}"/>
                                     <Button Content="Modificar"
                                             x:Name="BtnModificarDPTO"
                                             Background="blue"
@@ -379,7 +379,7 @@
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
                                             Click="Actualizar"
-                                            CommandParameter="{Binding ID_DPTO}"/>
+                                            CommandParameter="{Binding id_dpto}"/>
                                     <Button Content="Eliminar"
                                             x:Name="BtnEliminarDPTO"
                                             Background="Red"
@@ -388,26 +388,26 @@
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
                                             Click="Eliminar"
-                                            CommandParameter="{Binding ID_DPTO}"/>
+                                            CommandParameter="{Binding id_dpto}"/>
                                 </DockPanel>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     <DataGridTextColumn Header="Nombre"
                                         Width="100"
-                                        Binding="{Binding NOMBRE_DPTO}"/>
+                                        Binding="{Binding nombre_dpto}"/>
                     <DataGridTextColumn Header="Direccion"
                                         Width="*"
-                                        Binding="{Binding DIRECCION}"/>
+                                        Binding="{Binding direccion}"/>
                     <DataGridTextColumn Header="Numero DPTO"
                                         Width="*"
-                                        Binding="{Binding NRO_DPTO}"/>
+                                        Binding="{Binding nro_dpto}"/>
                     <DataGridTextColumn Header="Comuna"
                                         Width="*"
-                                        Binding="{Binding NOMBRE_COMUNA}"/>
-                    <DataGridTextColumn Header=" Region"
+                                        Binding="{Binding nombre_comuna}"/>
+                    <DataGridTextColumn Header=" Disponibilidad"
                                         Width="*"
-                                        Binding="{Binding NOMBRE_REGION}"/>
+                                        Binding="{Binding descr_estado}"/>
 
                 </DataGrid.Columns>
             </DataGrid>

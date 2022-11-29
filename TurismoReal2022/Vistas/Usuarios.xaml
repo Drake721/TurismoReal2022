@@ -5,9 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TurismoReal2022.Vistas"
              mc:Ignorable="d"
-             Height="500"
-             Width="675"
-             Background="Transparent">
+             Height="509"
+             Width="693"
+             Background="Transparent"
+             Opacity="1">
 
     <UserControl.Resources>
         <!--#region Buscador style-->
@@ -218,9 +219,9 @@
         <!--#endRegion -->
     </UserControl.Resources>
 
-    <Border CornerRadius="12"                       
-            BorderThickness="2"
-            Opacity="0.95">
+    <Border CornerRadius="5"                       
+            BorderThickness="0.4"
+            Opacity="1">
             <Border.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
                     <GradientStop Color="#FF2B1A16" Offset="0"/>
@@ -229,9 +230,9 @@
             </Border.Background>
 
             <Border.BorderBrush>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                <LinearGradientBrush StartPoint="0,1.5" EndPoint="1,1">
                     <GradientStop Color="Red" Offset="0"/>
-                    <GradientStop Color="Red" Offset="0.498"/>
+                    <GradientStop Color="Maroon" Offset="0.598"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
 
@@ -370,7 +371,7 @@
                                             Foreground="White"
                                             Style="{DynamicResource ButtonBUSCAR}" 
                                             Click="Consultar"
-                                            CommandParameter="{Binding ID_USUARIO}"/>
+                                            CommandParameter="{Binding id_usuario}"/>
                                     <Button Content="Modificar"
                                             x:Name="BtnModificar"
                                             Background="blue"
@@ -378,7 +379,7 @@
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            CommandParameter="{Binding ID_USUARIO}" 
+                                            CommandParameter="{Binding id_usuario}" 
                                             Click="Actualizar"/>
                                     <Button Content="Eliminar"
                                             x:Name="BtnEliminar"
@@ -387,7 +388,7 @@
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            CommandParameter="{Binding ID_USUARIO}"
+                                            CommandParameter="{Binding id_usuario}"
                                             Click="Eliminar"/>
                                 </DockPanel>
                                 </DataTemplate>
@@ -395,19 +396,19 @@
                         </DataGridTemplateColumn>
                         <DataGridTextColumn Header="Nombre"
                                             Width="100"
-                                            Binding="{Binding NOMBRES}"/>                                            
+                                            Binding="{Binding nombres}"/>                                            
                         <DataGridTextColumn Header=" Apellido"
                                             Width="100"
-                                            Binding="{Binding APELLIDOPATERNO}"/>
+                                            Binding="{Binding apellidopaterno}"/>
                         <DataGridTextColumn Header="Correo"
                                             Width="*"
-                                            Binding="{Binding EMAIL}"/>
+                                            Binding="{Binding email}"/>
                         <DataGridTextColumn Header="Celular"
                                             Width="*"
-                                            Binding="{Binding CELULAR}"/>
+                                            Binding="{Binding celular}"/>
                         <DataGridTextColumn Header="Cargo"
                                             Width="*"
-                                            Binding="{Binding NOMBRECARGO}"/>
+                                            Binding="{Binding nombrecargo}"/>
 
                     </DataGrid.Columns>
                 </DataGrid>

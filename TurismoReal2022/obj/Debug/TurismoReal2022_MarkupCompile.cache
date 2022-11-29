@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\App.xaml
-6-1360818173
+121036964084
 
-14-1151892301
+201802116922
 271763330707
-Login.xaml;MainWindow.xaml;Vistas\AgregarDPTO.xaml;Vistas\agregarUsuario.xaml;Vistas\Departamentos.xaml;Vistas\Usuarios.xaml;
+Login.xaml;MainWindow.xaml;Vistas\AgregarDPTO.xaml;Vistas\agregarUsuario.xaml;Vistas\Cargo.xaml;Vistas\CrearMantenimiento.xaml;Vistas\Departamentos.xaml;Vistas\Estado.xaml;Vistas\Inventario.xaml;Vistas\Mantenimiento.xaml;Vistas\Usuarios.xaml;Vistas\Vehiculo.xaml;
 
 False
 

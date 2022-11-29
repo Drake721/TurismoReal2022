@@ -115,8 +115,23 @@
     <Compile Include="Vistas\agregarUsuario.xaml.cs">
       <DependentUpon>agregarUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Cargo.xaml.cs">
+      <DependentUpon>Cargo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CrearMantenimiento.xaml.cs">
+      <DependentUpon>CrearMantenimiento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Departamentos.xaml.cs">
       <DependentUpon>Departamentos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Estado.xaml.cs">
+      <DependentUpon>Estado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Inventario.xaml.cs">
+      <DependentUpon>Inventario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Mantenimiento.xaml.cs">
+      <DependentUpon>Mantenimiento.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Usuarios.xaml.cs">
       <DependentUpon>Usuarios.xaml</DependentUpon>
@@ -126,6 +141,9 @@
     <Compile Include="Vistas\ValidacionesUsuario\EmailHasta.cs" />
     <Compile Include="Vistas\ValidacionesUsuario\NombreHasta.cs" />
     <Compile Include="Vistas\ValidacionesUsuario\TelefonoEsNroPositivo.cs" />
+    <Compile Include="Vistas\Vehiculo.xaml.cs">
+      <DependentUpon>Vehiculo.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Login.xaml.cs">
@@ -195,13 +213,37 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Vistas\Cargo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\CrearMantenimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\Departamentos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Estado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Inventario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Mantenimiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Usuarios.xaml">
       <SubType>Designer</SubType>
       <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="Vistas\Vehiculo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

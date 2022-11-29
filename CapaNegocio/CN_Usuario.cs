@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System.Collections.Generic;
+using System.Data;
 using CapaDatos;
 using CapaEntidad;
 
@@ -10,9 +11,9 @@ namespace CapaNegocio
 
         //crud usuarios
         #region consultar
-        public CE_Usuario Consultar(int ID_USUARIO)
+        public CE_Usuario Consultar(int Id_usuario)
         {
-            return objDatos.CD_Consulta(ID_USUARIO);
+            return objDatos.CD_Consulta(Id_usuario);
         }
         #endregion
 
@@ -61,6 +62,35 @@ namespace CapaNegocio
             return objDatos.CargarUsuarios();
         }
 
+        #endregion
+        #region login
+        public CE_Usuario Login(string email, string clave)
+        {
+            return objDatos.Logins(email, clave);
+        }
+        #endregion
+
+        #region idUsuario
+        public int id_usuario(string nombres)
+        {
+            return objDatos.id_usuario(nombres);
+        }
+        #endregion
+
+        #region nombreUsuario
+        public CE_Usuario nombres(int id_usuario)
+        {
+
+            return objDatos.nombres(id_usuario);
+        }
+
+        #endregion
+
+        #region listar 
+        public List<string> ListarUsuario()
+        {
+            return objDatos.ObtenerUsuarios();
+        }
         #endregion
     }
 }

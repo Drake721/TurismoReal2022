@@ -65,7 +65,7 @@
             </Setter>
         </Style>
     </Page.Resources>
-    <Border CornerRadius="12"                       
+    <Border CornerRadius="5"                       
             BorderThickness="2"
             Opacity="1">
         <Border.Background>
@@ -78,7 +78,7 @@
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                 <GradientStop Color="Red" Offset="0"/>
-                <GradientStop Color="Red" Offset="0.498"/>
+                <GradientStop Color="Maroon" Offset="0.498"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
 

@@ -92,7 +92,7 @@ namespace TurismoReal2022.Vistas
             {
                 int Region = objeto_CN_Region.ID_REGION(cbRegion.Text);
                 int Comuna = objeto_CN_Comuna.ID_COMUNA(cbComuna.Text);
-                int Disponibilidad = objeto_CN_Disponibilidad.ID_DISP(cbDisponibilidad.Text);
+                int Disponibilidad = objeto_CN_Disponibilidad.ID_DISP(cbDisponibilidad.Text);                
                 objeto_CE_Departamento.NOMBRE_DPTO = tbNombreDPTO.Text;
                 objeto_CE_Departamento.TARIFA_DIARIA = int.Parse(tbTARIFA.Text);
                 objeto_CE_Departamento.DIRECCION = tbDIRECCION.Text;
@@ -147,10 +147,10 @@ namespace TurismoReal2022.Vistas
         {
             if (camposLlenos() == true)
             {
-                //pendiente
                 int Region = objeto_CN_Region.ID_REGION(cbRegion.Text);
                 int Comuna = objeto_CN_Comuna.ID_COMUNA(cbComuna.Text);
                 int Disponibilidad = objeto_CN_Disponibilidad.ID_DISP(cbDisponibilidad.Text);
+                objeto_CE_Departamento.ID_DPTO = ID_DPTO;
                 objeto_CE_Departamento.NOMBRE_DPTO = tbNombreDPTO.Text;
                 objeto_CE_Departamento.TARIFA_DIARIA = int.Parse(tbTARIFA.Text);
                 objeto_CE_Departamento.DIRECCION = tbDIRECCION.Text;

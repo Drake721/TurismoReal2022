@@ -37,7 +37,7 @@ namespace TurismoReal2022.Vistas
         {
             int id = (int)((Button)sender).CommandParameter;
             agregarUsuario ventana =new agregarUsuario();
-            ventana.ID_USUARIO = id;
+            ventana.id_usuario = id;
             ventana.Consultar();
             FrameUsuarios.Content = ventana;
             ventana.Titulo.Text = "Consultar Usuario";
@@ -58,7 +58,7 @@ namespace TurismoReal2022.Vistas
         {
             int id = (int)((Button)sender).CommandParameter;
             agregarUsuario ventana = new agregarUsuario();
-            ventana.ID_USUARIO = id;
+            ventana.id_usuario = id;
             ventana.Consultar();
             FrameUsuarios.Content = ventana;
             ventana.Titulo.Text = "Actualizar Usuario";
@@ -79,7 +79,7 @@ namespace TurismoReal2022.Vistas
         {
             int id = (int)((Button)sender).CommandParameter;
             agregarUsuario ventana = new agregarUsuario();
-            ventana.ID_USUARIO = id;
+            ventana.id_usuario = id;
             ventana.Consultar();
             FrameUsuarios.Content = ventana;
             ventana.Titulo.Text = "Eliminar Usuario";

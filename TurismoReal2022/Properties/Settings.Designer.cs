@@ -26,5 +26,8 @@ namespace TurismoReal2022.Properties
                 return defaultInstance;
             }
         }
+
+        public int ID_USUARIO { get; internal set; }
+        public int IDCARGO { get; internal set; }
     }
 }

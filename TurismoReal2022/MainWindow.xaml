@@ -192,7 +192,7 @@
 
         <Border CornerRadius="10"                    
             BorderThickness="2"
-            Opacity="0.95">
+            Opacity="0.97">
             <Border.Background>
                 <LinearGradientBrush EndPoint="1,0" StartPoint="0,1">
                     <GradientStop Color="#FF2B1A16" Offset="0"/>
@@ -202,8 +202,8 @@
 
             <Border.BorderBrush>
                 <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="Red" Offset="0"/>
-                    <GradientStop Color="Red" Offset="0.498"/>
+                    <GradientStop Color="red" Offset="1"/>
+                    <GradientStop Color="Maroon" Offset="0.498"/>
                 </LinearGradientBrush>
             </Border.BorderBrush>
 
@@ -309,10 +309,11 @@
                       VerticalAlignment="Bottom"
                       HorizontalAlignment="Right"
                       Height="511"
-                      Width="675"
+                      Width="695"
                       Grid.ColumnSpan="2"
                       Grid.Row="1" 
-                      Margin="0,0,41,-5" PreviewMouseLeftButtonDown="PreviewMouseLeftBouttom">
+                      Margin="0,5,25,0" 
+                      PreviewMouseLeftButtonDown="PreviewMouseLeftBouttom">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="511"/>
                         <RowDefinition Height="200"/>
@@ -520,13 +521,15 @@
                             <!--#endRegion3 -->
                             <!--#Region Inicio4 -->
                             <ListViewItem Style="{DynamicResource ListViewItemStyle}" Height="70">
-                                <Button Style="{DynamicResource BtnListaStyle}" x:Name="btnMantenciones"
+                                <Button Style="{DynamicResource BtnListaStyle}" 
+                                        x:Name="btnMantenciones"
                                         Height="70"
                                         Width="200"
                                         HorizontalAlignment="Left"
                                         Cursor="Hand"
                                         Background="Transparent"
-                                        BorderBrush="Transparent">
+                                        BorderBrush="Transparent"
+                                        Click="Mantencion_Click">
                                     <Grid Width="200">
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="60"/>

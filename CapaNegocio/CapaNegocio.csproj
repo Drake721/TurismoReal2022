@@ -45,8 +45,10 @@
     <Compile Include="CN_Comuna.cs" />
     <Compile Include="CN_Departamento.cs" />
     <Compile Include="CN_Disponibilidad.cs" />
+    <Compile Include="CN_Mantenimiento.cs" />
     <Compile Include="CN_Region.cs" />
     <Compile Include="CN_Usuario.cs" />
+    <Compile Include="CN_Vehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
