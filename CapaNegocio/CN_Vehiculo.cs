@@ -45,7 +45,7 @@ namespace CapaNegocio
 
         #region verUsuarios
 
-        public DataTable CargarVehiculs()
+        public DataTable CargarVehiculos()
         {
             return CD_Vehiculo.Cargarvehiculos();
         }

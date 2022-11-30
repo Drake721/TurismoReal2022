@@ -230,7 +230,7 @@ namespace CapaDatos
             List<string> lista = new List<string>();
             while (reader.Read())
             {                    
-                    lista.Add(Convert.ToString(reader["nombres, nombrecargo"]));
+                    lista.Add(Convert.ToString(reader["nombres"]));
             }
             con.CerrarConexion();
 

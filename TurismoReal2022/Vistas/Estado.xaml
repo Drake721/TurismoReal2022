@@ -295,7 +295,7 @@
                     />
             <!--#endregion -->
 
-            <!--#region Seccion mantenimiento-->
+            <!--#region Seccion Estado-->
 
             <TextBlock Grid.Row="2"
                         Text="Realizar Modificaciones a las disponibilidades "
@@ -322,6 +322,7 @@
                         Width="180"
                         Height="30"
                         HorizontalAlignment="Left"
+                        Click="Agregar"
                         >
                 <TextBlock Text="Crear Estado"
                            Foreground="White"
@@ -329,10 +330,6 @@
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"/>
             </Button>
-
-
-
-
             <!--#endregion-->
 
             <!--#Region DataGrid-->
@@ -371,31 +368,31 @@
                             <DataTemplate>
                                 <DockPanel>
                                     <Button Content="Consultar"
-                                            x:Name="BtnConsultarVehi"
+                                            x:Name="BtnConsultar"
                                             Background="green"
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Foreground="White"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Consultar"
                                             CommandParameter="{Binding id_disp}"/>
-                                    <Button Content="Modificar "
+                                    <Button Content="Modificar"
                                             x:Name="BtnModificarVehi"
                                             Background="blue"
                                             Foreground="White"
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Actualizar"
                                             CommandParameter="{Binding id_disp}"/>
                                     <Button Content="Eliminar"
-                                            x:Name="BtnEliminarVehi"
+                                            x:Name="BtnEliminar"
                                             Background="Red"
                                             Foreground="White"
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Eliminar"
                                             CommandParameter="{Binding id_disp}"/>
                                 </DockPanel>
                             </DataTemplate>
@@ -413,10 +410,10 @@
             </DataGrid>
             <!--#endRegion-->
             <!--#region FrameMantenimiento-->
-            <Frame x:Name="FrameMantenimiento"
+            <Frame x:Name="FrameEstado"
                        Grid.Column="0"
                        Grid.Row="0"
-                       Grid.RowSpan="8"
+                       Grid.RowSpan="10"
                        Grid.ColumnSpan="8" />
 
             <!--#endregion-->

@@ -22,6 +22,7 @@ namespace TurismoReal2022.Vistas
             CargarCB();
         }
         #endregion
+
         #region regresar
         private void BtnRegresa(object sender, RoutedEventArgs e)
         {
@@ -54,6 +55,7 @@ namespace TurismoReal2022.Vistas
             }
         }
         #endregion 
+
         #region crud usuarios
         public int id_usuario;
         public string patron = "ENCRIPTA";
@@ -85,6 +87,7 @@ namespace TurismoReal2022.Vistas
             }
         }
         #endregion
+
         #region cosultas
         public void Consultar()
         {
@@ -103,6 +106,7 @@ namespace TurismoReal2022.Vistas
 
         }
         #endregion
+
         #region Modificar
         private void Modificar(object sender, RoutedEventArgs e)
         {
@@ -146,6 +150,7 @@ namespace TurismoReal2022.Vistas
             }
         }
         #endregion
+
         #region Eliminar
         private void Eliminar(object sender, RoutedEventArgs e)
         {
@@ -156,6 +161,7 @@ namespace TurismoReal2022.Vistas
             Content = new Usuarios();
         }
         #endregion
+
         #region imagen procesamiento
         byte[] data;
         private bool imagenSubida = false;
@@ -174,6 +180,7 @@ namespace TurismoReal2022.Vistas
             imagenSubida = true;
         }
         #endregion
+
         #endregion
     }
 }

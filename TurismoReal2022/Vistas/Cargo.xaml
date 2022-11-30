@@ -312,27 +312,24 @@
 
 
             <Button Style="{DynamicResource ButtonBUSCAR}" x:Name="CrearCargo"
-                        Background="Green"
-                        BorderBrush="green"
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        Grid.ColumnSpan="3"
-                        Margin="40,0,0,0"
-                        Cursor="Hand"
-                        Width="180"
-                        Height="30"
-                        HorizontalAlignment="Left"
+                    Background="Green"
+                    BorderBrush="green"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Grid.ColumnSpan="3"
+                    Margin="40,0,0,0"
+                    Cursor="Hand"
+                    Width="180"
+                    Height="30"
+                    HorizontalAlignment="Left"
+                    Click="Agregar"
                         >
                 <TextBlock Text="Crear Cargo"
                            Foreground="White"
                            FontSize="15"
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"/>
-            </Button>
-
-
-
-
+            </Button>            
             <!--#endregion-->
 
             <!--#Region DataGrid-->
@@ -371,31 +368,31 @@
                             <DataTemplate>
                                 <DockPanel>
                                     <Button Content="Consultar"
-                                            x:Name="BtnConsultarVehi"
+                                            x:Name="BtnConsultar"
                                             Background="green"
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Foreground="White"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Consultar"
                                             CommandParameter="{Binding id}"/>
                                     <Button Content="Modificar "
-                                            x:Name="BtnModificarVehi"
+                                            x:Name="BtnModificar"
                                             Background="blue"
                                             Foreground="White"
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Actualizar"
                                             CommandParameter="{Binding id}"/>
                                     <Button Content="Eliminar"
-                                            x:Name="BtnEliminarVehi"
+                                            x:Name="BtnEliminar"
                                             Background="Red"
                                             Foreground="White"
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Eliminar"
                                             CommandParameter="{Binding id}"/>
                                 </DockPanel>
                             </DataTemplate>
@@ -414,11 +411,12 @@
                 </DataGrid.Columns>
             </DataGrid>
             <!--#endRegion-->
+            
             <!--#region FrameMantenimiento-->
-            <Frame x:Name="FrameMantenimiento"
+            <Frame x:Name="FrameCargo"
                        Grid.Column="0"
                        Grid.Row="0"
-                       Grid.RowSpan="8"
+                       Grid.RowSpan="10"
                        Grid.ColumnSpan="8"/>
 
             <!--#endregion-->

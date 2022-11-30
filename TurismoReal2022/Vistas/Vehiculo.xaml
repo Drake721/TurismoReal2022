@@ -257,7 +257,9 @@
                 <RowDefinition />
                 <RowDefinition />
                 <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
             </Grid.RowDefinitions>
             <!--#endRegion-->
 
@@ -294,10 +296,10 @@
                     Click="BtnRegresa"/>
             <!--#endregion -->
 
-            <!--#region Seccion mantenimiento-->
+            <!--#region SeccioncrearVehiculo-->
 
             <TextBlock Grid.Row="2"
-                        Text="Realizar mantenimiento a un Vehiculo "
+                       Text="Realizar mantenimiento a un Vehiculo "
                        Foreground="White"
                        FontSize="15"
                        FontFamily="Montserrat" 
@@ -316,11 +318,12 @@
                         Grid.Column="0"
                         Grid.Row="3"
                         Grid.ColumnSpan="3"
-                        Margin="40,0,0,0"
+                        Margin="75,0,0,0"
                         Cursor="Hand"
                         Width="180"
                         Height="30"
                         HorizontalAlignment="Left"
+                    Click="Agregar"
                         >
                 <TextBlock Text="Crear Vehiculo"
                            Foreground="White"
@@ -333,6 +336,40 @@
 
 
             <!--#endregion-->
+
+            <!--#Region textos-->
+            
+            <TextBlock Text="* Consultar: Ve los datos del vehiculo."
+                       Foreground="White"
+                       FontSize="12"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Grid.Column="0"
+                       Grid.Row="9"
+                       Grid.ColumnSpan="7"
+                       Margin="20 0 0 0"/>
+           
+            <TextBlock Text="* Modificar: Actualiza los datos del vehiculo, ademas de que tambien puedes asignar un Chofer desde esta opcion. "
+                       Foreground="White"
+                       FontSize="12"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Grid.Column="0"
+                       Grid.Row="10"
+                       Grid.ColumnSpan="8"
+                       Margin="20 0 0 0"/>
+            
+            <TextBlock Text="* Eliminar: Borras los registros de algun vehiculo."
+                       Foreground="White"
+                       FontSize="12"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Grid.Column="0"
+                       Grid.Row="11"
+                       Grid.ColumnSpan="8"
+                       Margin="20 0 0 0"/>
+
+            <!--#endRegion-->
 
             <!--#Region DataGrid-->
             <TextBlock Grid.Row="4"
@@ -376,7 +413,7 @@
                                             BorderBrush="Transparent"
                                             Foreground="White"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Consultar"
                                             CommandParameter="{Binding id_vehiculo}"/>
                                     <Button Content="Modificar/Asignar "
                                             x:Name="BtnModificarVehi"
@@ -385,7 +422,7 @@
                                             Width="140"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Actualizar"
                                             CommandParameter="{Binding id_vehiculo}"/>
                                     <Button Content="Eliminar"
                                             x:Name="BtnEliminarVehi"
@@ -394,7 +431,7 @@
                                             Width="80"
                                             BorderBrush="Transparent"
                                             Style="{DynamicResource ButtonBUSCAR}"
-                                            
+                                            Click="Eliminar"
                                             CommandParameter="{Binding id_vehiculo}"/>
                                 </DockPanel>
                             </DataTemplate>
@@ -403,30 +440,23 @@
                     <DataGridTextColumn Header="Nombre Chofer"
                                         Width="*"
                                         Binding="{Binding nombres}"/>
+                    <DataGridTextColumn Header=" Cargo"
+                                        Width="*"
+                                        Binding="{Binding nombrecargo}"/>
                     <DataGridTextColumn Header="Patente"
                                         Width="*"
                                         Binding="{Binding patente}"/>
                     <DataGridTextColumn Header="Datos del vehiculo"
                                         Width="*"
-                                        Binding="{Binding descripcion}"/>
-                    <DataGridTextColumn Header=" Fecha_Termino"
-                                        Width="*"
-                                        Binding="{Binding fecha_termino}"/>
-                    <DataGridTextColumn Header="Comuna"
-                                        Width="*"
-                                        Binding="{Binding nombre_comuna}"/>
-                    <DataGridTextColumn Header="Disponibilidad"
-                                        Width="*"
-                                        Binding="{Binding descr_estado}"/>
-
+                                        Binding="{Binding descripcion}"/>                  
                 </DataGrid.Columns>
             </DataGrid>
             <!--#endRegion-->
             <!--#region FrameMantenimiento-->
-            <Frame x:Name="FrameMantenimiento"
+            <Frame x:Name="FrameVehiculo"
                        Grid.Column="0"
                        Grid.Row="0"
-                       Grid.RowSpan="8"
+                       Grid.RowSpan="12"
                        Grid.ColumnSpan="8"/>
 
             <!--#endregion-->

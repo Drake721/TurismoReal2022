@@ -118,6 +118,7 @@
                 <RowDefinition Height="30"/>
             </Grid.RowDefinitions>
             <!--#endregion columnas y filas-->
+            
             <!--#region titulo-->
             <TextBlock x:Name="Titulo"
                        Text="Creacion de usuarios"
@@ -133,6 +134,7 @@
                        Margin="75,0,0,0"/>
 
             <!--#endregion -->
+            
             <!--#region botonRegresar -->
             <Button Style="{DynamicResource ButtonRegresar}"     
                     x:Name="BtnRegresar"
@@ -149,6 +151,7 @@
                     RenderTransformOrigin="0.82,0.367"
                     Click="BtnRegresa"/>
             <!--#endregion -->
+            
             <!--#region BtnEliminar -->
             <Button x:Name="BtnEliminar"
                     Content="Eliminar"
@@ -164,6 +167,7 @@
                     Visibility="Hidden"
                     Click="Eliminar"/>
             <!--#endregion -->
+            
             <!--#region Modificar -->
             <Button x:Name="BtnModificar"
                     Content="Modificar"
@@ -180,6 +184,7 @@
                     Click="Modificar"
                     />
             <!--#endregion -->
+            
             <!--#region Crear -->
             <Button x:Name="BtnCrear"
                     Content="Crear"

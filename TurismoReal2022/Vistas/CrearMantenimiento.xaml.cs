@@ -67,6 +67,7 @@ namespace TurismoReal2022.Vistas
                 }
             }
         #endregion
+
         #region crud usuarios
         public int id_mant;
         public int id_dpto;

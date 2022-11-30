@@ -57,5 +57,16 @@ namespace TurismoReal2022
         {
             DataContext = new Mantenimiento();
         }
+        
+        private void Inicio_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
+
+
+
+
     }
 }

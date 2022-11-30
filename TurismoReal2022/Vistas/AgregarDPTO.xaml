@@ -150,6 +150,7 @@
                     RenderTransformOrigin="0.82,0.367"
                     Click="BtnRegresa"/>
             <!--#endregion -->
+            
             <!--#region BtnEliminar -->
             <Button x:Name="BtnEliminar"
                     Content="Eliminar"
@@ -166,6 +167,7 @@
                     Click="Eliminar"
                     />
             <!--#endregion -->
+            
             <!--#region Modificar -->
             <Button x:Name="BtnModificar"
                     Content="Modificar"
@@ -182,6 +184,7 @@
                     Click="Modificar"
                     />
             <!--#endregion -->
+            
             <!--#region Crear -->
             <Button x:Name="BtnCrear"
                     Content="Crear"
@@ -197,6 +200,7 @@
                     Visibility="Hidden"
                     Click="Crear"/>
             <!--#endregion -->
+            
             <!--#region CONTENIDO-->
             <TextBlock Grid.Row="4"
                        Grid.Column="1"

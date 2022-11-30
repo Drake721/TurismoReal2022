@@ -118,8 +118,17 @@
     <Compile Include="Vistas\Cargo.xaml.cs">
       <DependentUpon>Cargo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\CrearCargo.xaml.cs">
+      <DependentUpon>CrearCargo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CrearDisponibilidad.xaml.cs">
+      <DependentUpon>CrearDisponibilidad.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\CrearMantenimiento.xaml.cs">
       <DependentUpon>CrearMantenimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\CrearVehiculo.xaml.cs">
+      <DependentUpon>CrearVehiculo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Departamentos.xaml.cs">
       <DependentUpon>Departamentos.xaml</DependentUpon>
@@ -217,7 +226,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Vistas\CrearCargo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\CrearDisponibilidad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\CrearMantenimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\CrearVehiculo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

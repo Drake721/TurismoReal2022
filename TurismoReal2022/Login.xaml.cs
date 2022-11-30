@@ -41,19 +41,24 @@ namespace TurismoReal2022
         void Logins(string email, string clave)
         {
             CN_Usuario cn = new CN_Usuario();
+            CN_Cargo ca = new CN_Cargo();
             var a=cn.Login(email, clave);
-            if (a.Id_usuario > 0 && a.Idcargo == 1)
+            if (a.Id_usuario > 0)
             {
-                Properties.Settings.Default.ID_USUARIO = a.Id_usuario;
-                Properties.Settings.Default.IDCARGO = a.Idcargo;
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
+                if (a.Idcargo == 1)
+                {
+                    Properties.Settings.Default.ID_USUARIO = a.Id_usuario;
+                    Properties.Settings.Default.IDCARGO = a.Idcargo;
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
+                }
+                else 
+                {
+                    MessageBox.Show("El usuario debe ser Administrador");
+                }
             }
-            else if (a.Idcargo != 1)
-            {
-                MessageBox.Show("El usuario debe ser Administrador");
-            }
+            
             else
             {
                 MessageBox.Show("Credenciales o Usuario incorrecto! Reintente");
