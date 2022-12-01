@@ -199,6 +199,7 @@ namespace CapaDatos
             return id_usuario;
         }
         #endregion
+
         #region NombreUsuario
         public CE_Usuario nombres(int id_usuario)
         {
@@ -236,6 +237,22 @@ namespace CapaDatos
 
             return lista;
 
+        }
+        #endregion
+
+        #region Buscar usuarios
+        public DataTable Buscar(string buscar)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SP_U_Buscar", con.AbrirConexion());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@buscar", SqlDbType.VarChar).Value = buscar;
+            DataSet ds = new DataSet();
+            ds.Clear();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+            con.CerrarConexion();
+
+            return dt;
         }
         #endregion
     }

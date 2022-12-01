@@ -286,6 +286,7 @@
                 <!--#endRegion fila buscador-->
                 <!--#Region TEXTBOX-->
                 <TextBox Style="{DynamicResource TextBoxStyle}" 
+                         x:Name="tbBuscar"
                          TextAlignment="Center"
                          Background="Transparent"
                          Foreground="White"
@@ -294,29 +295,9 @@
                          Grid.Column="2"
                          Grid.Row="2"
                          VerticalAlignment="Center"
-                         FontSize="15" Margin="40,0,0,0"/>
+                         FontSize="15" Margin="40,0,0,0"
+                         TextChanged="Buscando"/>
                 <!--#endRegion -->
-                <!--#Region BOTON-->
-                <Button Style="{DynamicResource ButtonBUSCAR}" x:Name="BtnBuscar"
-                        Grid.Column="4"
-                        Grid.Row="2"
-                        Grid.ColumnSpan="2"
-                        Background="Red"
-                        BorderBrush="red"
-                        Margin="30,0,0,0"
-                        Cursor="Hand"
-                        Width="120"
-                        HorizontalAlignment="Left"
-                        Height="30">
-                    <TextBlock Text="Buscar"
-                               Foreground="White"
-                               FontSize="15"
-                               VerticalAlignment="Center"
-                               HorizontalAlignment="Center"/>
-
-                </Button>
-
-                <!--#endRegion fila-->
                 <!--#Region AGREGAR-->
                 <Button Style="{DynamicResource ButtonBUSCAR}" x:Name="BtnAgregar"
                         Background="Green"

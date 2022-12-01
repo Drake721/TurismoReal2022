@@ -215,6 +215,7 @@ namespace CapaDatos
             return id_dpto;
         }
         #endregion
+
         #region NombreDPTO
         public CE_Departamento nombre_dpto(int id_dpto)
         {
@@ -256,5 +257,21 @@ namespace CapaDatos
 
         }
         #endregion  
+
+        #region Buscar DPTO
+        public DataTable Buscar(string buscar)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("SP_D_Buscar", con.AbrirConexion());
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@buscar", SqlDbType.VarChar).Value = buscar;
+            DataSet ds = new DataSet();
+            ds.Clear();
+            da.Fill(ds);
+            DataTable dt = ds.Tables[0];
+            con.CerrarConexion();
+
+            return dt;
+        }
+        #endregion
     }
 }

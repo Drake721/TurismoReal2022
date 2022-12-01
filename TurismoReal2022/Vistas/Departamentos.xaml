@@ -258,6 +258,7 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <!--#endRegion-->
+            
             <!--#Region fila titulo -->
             <TextBlock Grid.Row="0"
                     Text="Administracion de Departamentos"
@@ -271,6 +272,7 @@
                            Margin="80,0,0,0"
                            Grid.Column="1"/>
             <!--#endRegion fila titulo-->
+            
             <!--#Region fila buscador-->
             <TextBlock Grid.Row="2"
                     Text="Buscar Departamento"
@@ -283,8 +285,10 @@
                                HorizontalAlignment="Center"
                                Margin="0,0,0,0"/>
             <!--#endRegion fila buscador-->
+            
             <!--#Region TEXTBOX-->
             <TextBox Style="{DynamicResource TextBoxStyle}" 
+                     x:Name="tbBuscar"
                          TextAlignment="Center"
                          Background="Transparent"
                          Foreground="White"
@@ -293,29 +297,10 @@
                          Grid.Column="2"
                          Grid.Row="2"
                          VerticalAlignment="Center"
-                         FontSize="15" Margin="40,0,0,0"/>
+                         FontSize="15" Margin="40,0,0,0"
+                     TextChanged="Buscando"/>
             <!--#endRegion -->
-            <!--#Region BOTON-->
-            <Button Style="{DynamicResource ButtonBUSCAR}" x:Name="BtnBuscarDpto"
-                        Grid.Column="4"
-                        Grid.Row="2"
-                        Grid.ColumnSpan="2"
-                        Background="Red"
-                        BorderBrush="red"
-                        Margin="30,0,0,0"
-                        Cursor="Hand"
-                        Width="120"                                    
-                        HorizontalAlignment="Left"
-                        Height="30" >
-                <TextBlock Text="Buscar"
-                               Foreground="White"
-                               FontSize="15"
-                               VerticalAlignment="Center"
-                               HorizontalAlignment="Center"/>
 
-            </Button>
-
-            <!--#endRegion fila-->
             <!--#Region AGREGAR-->
             <Button Style="{DynamicResource ButtonBUSCAR}" x:Name="BtnAgregarDpto"
                         Background="Green"

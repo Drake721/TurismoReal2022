@@ -100,5 +100,14 @@ namespace CapaNegocio
             return objDatos.ObtenerDpto();
         }
         #endregion
+
+        #region BuscarDPTO
+
+        public DataTable Buscar(string buscar)
+        {
+            return objDatos.Buscar(buscar);
+        }
+
+        #endregion
     }
 }

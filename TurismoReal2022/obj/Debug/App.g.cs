@@ -61,6 +61,8 @@ namespace TurismoReal2022 {
         [System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [System.CodeDom.Compiler.GeneratedCodeAttribute("PresentationBuildTasks", "4.0.0.0")]
         public static void Main() {
+            SplashScreen splashScreen = new SplashScreen("images/tr%20logo.png");
+            splashScreen.Show(true);
             TurismoReal2022.App app = new TurismoReal2022.App();
             app.InitializeComponent();
             app.Run();

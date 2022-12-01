@@ -17,6 +17,7 @@ namespace TurismoReal2022.Vistas
             CargarDatos();
         }
         #endregion
+
         #region cargar usuarios
         void CargarDatos()
         {
@@ -24,6 +25,7 @@ namespace TurismoReal2022.Vistas
 
         }
         #endregion
+
         #region agregar
         private void Agregar(object sender,RoutedEventArgs e)
         {
@@ -32,6 +34,7 @@ namespace TurismoReal2022.Vistas
             ventana.BtnCrear.Visibility=Visibility.Visible;
         }
         #endregion
+
         #region consultar
         private void Consultar(object sender, RoutedEventArgs e)
         {
@@ -53,6 +56,7 @@ namespace TurismoReal2022.Vistas
             ventana.btnimagen.IsEnabled = false;
         }
         #endregion
+
         #region Actualizar
         private void Actualizar(object sender, RoutedEventArgs e)
         {
@@ -74,6 +78,7 @@ namespace TurismoReal2022.Vistas
             ventana.BtnModificar.Visibility = Visibility.Visible; 
         }
         #endregion
+
         #region eliminar
         private void Eliminar(object sender, RoutedEventArgs e)
         {
@@ -95,8 +100,19 @@ namespace TurismoReal2022.Vistas
             ventana.btnimagen.IsEnabled = false;
             ventana.BtnEliminar.Visibility=Visibility.Visible;
         }
+
         #endregion
 
+        #region buscar
+        public void Buscar(string buscar)
+        {
+            GridDatos.ItemsSource = objeto_CN_Usuario.Buscar(buscar).DefaultView;
+        }
 
+        private void Buscando(object sender, TextChangedEventArgs e)
+        {
+            Buscar(tbBuscar.Text);
+        }
+        #endregion
     }
 }

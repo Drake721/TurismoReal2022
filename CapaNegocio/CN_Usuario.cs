@@ -55,7 +55,7 @@ namespace CapaNegocio
         #endregion
 
         //ver usuarios
-        #region verUsuarios
+        #region CargarUsuario
 
         public DataTable CargarUsuarios()
         {
@@ -63,6 +63,7 @@ namespace CapaNegocio
         }
 
         #endregion
+
         #region login
         public CE_Usuario Login(string email, string clave)
         {
@@ -92,5 +93,15 @@ namespace CapaNegocio
             return objDatos.ObtenerUsuarios();
         }
         #endregion
+
+        #region BuscarUsuario
+
+        public DataTable Buscar(string buscar)
+        {
+            return objDatos.Buscar(buscar);
+        }
+
+        #endregion
+
     }
 }

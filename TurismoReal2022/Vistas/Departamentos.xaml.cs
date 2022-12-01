@@ -102,5 +102,17 @@ namespace TurismoReal2022.Vistas
             ventana.BtnEliminar.Visibility = Visibility.Visible;
         }
         #endregion
+
+        #region buscar
+        public void Buscar(string buscar)
+        {
+            GridDatos.ItemsSource = objeto_CN_Departamento.Buscar(buscar).DefaultView;
+        }
+
+        private void Buscando(object sender, TextChangedEventArgs e)
+        {
+            Buscar(tbBuscar.Text);
+        }
+        #endregion
     }
 }
