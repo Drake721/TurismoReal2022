@@ -51,6 +51,7 @@ namespace TurismoReal2022.Vistas
             ventana.cbRegion.IsEnabled = false;
             ventana.cbComuna.IsEnabled = false;
             ventana.cbDisponibilidad.IsEnabled = false;
+            ventana.tbImagweb.IsEnabled = false;
             ventana.btnimagen.IsEnabled = false;
             ventana.btnimagen1.IsEnabled = false;
             ventana.btnimagen2.IsEnabled = false;
@@ -73,6 +74,7 @@ namespace TurismoReal2022.Vistas
             ventana.cbRegion.IsEnabled = true;
             ventana.cbComuna.IsEnabled = true;
             ventana.cbDisponibilidad.IsEnabled = true;
+            ventana.tbImagweb.IsEnabled = true;
             ventana.btnimagen.IsEnabled = true;
             ventana.btnimagen1.IsEnabled = true;
             ventana.btnimagen2.IsEnabled = true;
@@ -96,6 +98,7 @@ namespace TurismoReal2022.Vistas
             ventana.cbRegion.IsEnabled = false;
             ventana.cbComuna.IsEnabled = false;
             ventana.cbDisponibilidad.IsEnabled = false;
+            ventana.tbImagweb.IsEnabled = false;
             ventana.btnimagen.IsEnabled = false;
             ventana.btnimagen1.IsEnabled = false;
             ventana.btnimagen2.IsEnabled = false;

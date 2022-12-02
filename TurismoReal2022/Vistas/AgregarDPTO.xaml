@@ -98,7 +98,6 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="30"/>
-                <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
@@ -117,28 +116,31 @@
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <!--#endregion columnas y filas-->
+            
             <!--#region titulo-->
             <TextBlock x:Name="Titulo"
                        Text="Nuevo Departamento"
-                       Grid.Column="0"
+                       Grid.Column="3"
                        Grid.Row="1"
-                       Grid.ColumnSpan="6"
+                       Grid.ColumnSpan="3"
                        FontWeight="Bold"
                        FontSize="25"
                        FontFamily="Montserrat"
                        VerticalAlignment="Center"
                        Foreground="White"
-                       HorizontalAlignment="center"
-                       Margin="10,0,0,0"/>
+                       HorizontalAlignment="Left"
+                       Margin="0,0,0,0"/>
 
             <!--#endregion -->
+            
             <!--#region botonRegresar -->
             <Button Style="{DynamicResource ButtonRegresar}"     
                     x:Name="BtnRegresar"
                     Grid.Column="1"
-                    Grid.Row="2"
+                    Grid.Row="1"
                     Background="Maroon"
                     BorderBrush="Maroon"
                     Content="Regresar"
@@ -154,7 +156,7 @@
             <!--#region BtnEliminar -->
             <Button x:Name="BtnEliminar"
                     Content="Eliminar"
-                    Grid.Row="18"
+                    Grid.Row="19"
                     Grid.Column="5"
                     Width="120"
                     Background="Maroon"
@@ -171,7 +173,7 @@
             <!--#region Modificar -->
             <Button x:Name="BtnModificar"
                     Content="Modificar"
-                    Grid.Row="18"
+                    Grid.Row="19"
                     Grid.Column="5"
                     Width="120"
                     Background="Maroon"
@@ -188,7 +190,7 @@
             <!--#region Crear -->
             <Button x:Name="BtnCrear"
                     Content="Crear"
-                    Grid.Row="18"
+                    Grid.Row="19"
                     Grid.Column="5"
                     Width="120"
                     Background="Maroon"
@@ -202,56 +204,57 @@
             <!--#endregion -->
             
             <!--#region CONTENIDO-->
-            <TextBlock Grid.Row="4"
+            <TextBlock Grid.Row="3"
                        Grid.Column="1"
                        Text="Nombre Departamento"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
                        Foreground="White"/>
-            <TextBox Grid.Row="4"
+            <TextBox Grid.Row="3"
                      Grid.Column="2"
                      x:Name="tbNombreDPTO"
                      VerticalContentAlignment="Center"/>
-            <TextBlock Grid.Row="6"
+            <TextBlock Grid.Row="5"
                        Grid.Column="1"
                        Text="Tarifa Diaria"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
                        Foreground="White"/>
-            <TextBox Grid.Row="6"
+            <TextBox Grid.Row="5"
                      Grid.Column="2"
                      x:Name="tbTARIFA"
                      VerticalContentAlignment="Center"/>
-            <TextBlock Grid.Row="8"
+            <TextBlock Grid.Row="7"
                        Grid.Column="1"
                        Text="Dirección"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
                        Foreground="White"/>
-            <TextBox Grid.Row="8"
+            <TextBox Grid.Row="7"
                      Grid.Column="2"
                      x:Name="tbDIRECCION"
                      VerticalContentAlignment="Center"/>
-            <TextBlock Grid.Row="10"
+            <TextBlock Grid.Row="9"
                        Grid.Column="1"
                        Text="Nº Departamento"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
                        Foreground="White"/>
-            <TextBox Grid.Row="10"
+            <TextBox Grid.Row="9"
                      Grid.Column="2"
                      x:Name="tbNRODPTO"
                      VerticalContentAlignment="Center"/>
-            <TextBlock Grid.Row="12"
+            <TextBlock Grid.Row="11"
                        Grid.Column="1"
                        HorizontalAlignment="Left"
                        VerticalAlignment="Center"
-                       Foreground="White"><Run Language="es-es" Text="Capacidad"/></TextBlock>
-            <TextBox Grid.Row="12"
+                       Foreground="White"
+                       Text="Capacidad"/>
+            <TextBox Grid.Row="11"
                      Grid.Column="2"
                      x:Name="tbCAPACIDAD"
                      VerticalContentAlignment="Center"/>
-            <TextBlock Grid.Row="14"
+            <TextBlock Grid.Row="13"
                        Grid.Column="1"
                        Text="Region"
                        HorizontalAlignment="Left"
@@ -259,12 +262,12 @@
                        Foreground="White"/>
             <ComboBox x:Name="cbRegion" 
                       Grid.Column="2" 
-                      Grid.Row="14" 
+                      Grid.Row="13" 
                       VerticalAlignment="Center" Height="30"  
                       AutomationProperties.Name="cbRegion"
                       VerticalContentAlignment="Center"/>
            
-            <TextBlock Grid.Row="16"
+            <TextBlock Grid.Row="15"
                        Grid.Column="1"
                        Text="Comuna"
                        HorizontalAlignment="Left"
@@ -272,12 +275,12 @@
                        Foreground="White"/>
             <ComboBox x:Name="cbComuna" 
                       Grid.Column="2" 
-                      Grid.Row="16" 
+                      Grid.Row="15" 
                       VerticalAlignment="Center" Height="30"  
                       AutomationProperties.Name="cbComuna"
                       VerticalContentAlignment="Center"/>
 
-            <TextBlock Grid.Row="18"
+            <TextBlock Grid.Row="17"
                        Grid.Column="1"
                        Text="Disponibilidad"
                        HorizontalAlignment="Left"
@@ -285,12 +288,24 @@
                        Foreground="White"/>
             <ComboBox x:Name="cbDisponibilidad" 
                       Grid.Column="2" 
-                      Grid.Row="18" 
+                      Grid.Row="17" 
                       VerticalAlignment="Center" Height="30"  
                       AutomationProperties.Name="cbDisponibilidad"
                       VerticalContentAlignment="Center"/>
 
-            <Image Grid.Row="4"
+            <TextBlock Grid.Row="19"
+                       Grid.Column="1"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center"
+                       Foreground="White"
+                       Text="Nombre imagen web"/>
+            <TextBox Grid.Row="19"
+                     Grid.Column="2"
+                     x:Name="tbImagweb"
+                     VerticalContentAlignment="Center"/>
+
+
+            <Image Grid.Row="3"
                    Grid.Column="4"
                    Grid.RowSpan="5"
                    Grid.ColumnSpan="1"
@@ -298,7 +313,7 @@
                    Source="/Images/usuario-an.png"/>
 
             <Button Grid.Column="4"
-                    Grid.Row="10"
+                    Grid.Row="9"
                     Grid.ColumnSpan="1"
                     Width="120"
                     Content="Seleccionar Imagen"
@@ -312,7 +327,7 @@
                     RenderTransformOrigin="0.82,0.367" 
                     Click="Subirimg"/>
 
-            <Image Grid.Row="4"
+            <Image Grid.Row="3"
                    Grid.Column="5"
                    Grid.RowSpan="5"
                    Grid.ColumnSpan="1"
@@ -320,7 +335,7 @@
                    Source="/Images/usuario-an.png"/>
 
             <Button Grid.Column="5"
-                    Grid.Row="10"
+                    Grid.Row="9"
                     Grid.ColumnSpan="1"
                     Width="120"
                     Content="Seleccionar Imagen"
@@ -334,7 +349,7 @@
                     RenderTransformOrigin="0.82,0.367" 
                     Click="Subirimg1"/>
 
-            <Image Grid.Row="12"
+            <Image Grid.Row="11"
                    Grid.Column="4"
                    Grid.RowSpan="5"
                    Grid.ColumnSpan="1"
@@ -342,7 +357,7 @@
                    Source="/Images/usuario-an.png"/>
 
             <Button Grid.Column="4"
-                    Grid.Row="18"
+                    Grid.Row="17"
                     Grid.ColumnSpan="1"
                     Width="120"
                     Content="Seleccionar Imagen"

@@ -100,6 +100,7 @@ namespace TurismoReal2022.Vistas
                 objeto_CE_Departamento.CAPACIDAD = int.Parse(tbCAPACIDAD.Text);
                 objeto_CE_Departamento.ID_COMUNA = Comuna;
                 objeto_CE_Departamento.DISPONIBILIDAD = Disponibilidad;
+                objeto_CE_Departamento.IMAGE = tbImagweb.Text;
                 objeto_CE_Departamento.IMG = data;
                 objeto_CE_Departamento.IMG1 = data1;
                 objeto_CE_Departamento.IMG2 = data2;
@@ -130,6 +131,7 @@ namespace TurismoReal2022.Vistas
             cbRegion.Text = c.NOMBRE_REGION;
             cbComuna.Text = b.NOMBRE_COMUNA;
             cbDisponibilidad.Text = d.DESCR_ESTADO;
+            tbImagweb.Text = a.IMAGE.ToString();
 
             ImageSourceConverter imgs = new ImageSourceConverter();
             imagen.Source = (ImageSource)imgs.ConvertFrom(a.IMG);
@@ -158,6 +160,7 @@ namespace TurismoReal2022.Vistas
                 objeto_CE_Departamento.CAPACIDAD = int.Parse(tbCAPACIDAD.Text);
                 objeto_CE_Departamento.ID_COMUNA = Comuna;
                 objeto_CE_Departamento.DISPONIBILIDAD = Disponibilidad;
+                objeto_CE_Departamento.IMAGE = tbImagweb.Text;
                 objeto_CN_Departamento.ActualizarDatos(objeto_CE_Departamento);
                 Content = new Departamentos();
             }

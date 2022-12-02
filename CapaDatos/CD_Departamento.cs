@@ -30,6 +30,7 @@ namespace CapaDatos
             com.Parameters.AddWithValue("@CAPACIDAD", Departamento.CAPACIDAD);
             com.Parameters.AddWithValue("@ID_COMUNA", Departamento.ID_COMUNA);
             com.Parameters.AddWithValue("@DISPONIBILIDAD", Departamento.DISPONIBILIDAD);
+            com.Parameters.AddWithValue("@image", Departamento.IMAGE);
             com.Parameters.AddWithValue("@IMG", Departamento.IMG);
             com.Parameters.AddWithValue("@IMG1", Departamento.IMG1);
             com.Parameters.AddWithValue("@IMG2", Departamento.IMG2);
@@ -59,9 +60,10 @@ namespace CapaDatos
             ce.CAPACIDAD = Convert.ToInt32(row[5]); 
             ce.ID_COMUNA = Convert.ToInt32(row[6]);
             ce.DISPONIBILIDAD = Convert.ToInt32(row[7]);
-            ce.IMG = (byte[])row[8];
-            ce.IMG1 = (byte[])row[9];
-            ce.IMG2 = (byte[])row[10];
+            ce.IMAGE = Convert.ToString(row[8]);
+            ce.IMG = (byte[])row[9];
+            ce.IMG1 = (byte[])row[10];
+            ce.IMG2 = (byte[])row[11];
             return ce;
         }
         #endregion
@@ -102,6 +104,7 @@ namespace CapaDatos
             com.Parameters.AddWithValue("@CAPACIDAD", Departamento. CAPACIDAD);
             com.Parameters.AddWithValue("@ID_COMUNA", Departamento.ID_COMUNA);
             com.Parameters.AddWithValue("@DISPONIBILIDAD", Departamento.DISPONIBILIDAD);
+            com.Parameters.AddWithValue("@image", Departamento.IMAGE);
             com.ExecuteNonQuery();
             com.Parameters.Clear();
             con.CerrarConexion();

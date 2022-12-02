@@ -7,7 +7,7 @@ namespace CapaDatos
 {
     public class CD_Conexion
     {
-        private readonly SqlConnection con = new SqlConnection("Data Source = DESKTOP-L9LM2CE\\draco; initial catalog=DB_departamento_Turismo_Real2022; integrated security=true;");
+        private readonly SqlConnection con = new SqlConnection("Data Source = DESKTOP-L9LM2CE\\draco; initial catalog=db_turismo_real; integrated security=true;");
 
         public SqlConnection AbrirConexion()
         {
