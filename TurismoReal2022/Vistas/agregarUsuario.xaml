@@ -210,6 +210,7 @@
                      Grid.Column="2"
                      x:Name="tbNombres"
                      VerticalContentAlignment="Center"/>
+            
             <TextBlock Grid.Row="6"
                        Grid.Column="1"
                        Text="Apellido"
@@ -220,6 +221,7 @@
                      Grid.Column="2"
                      x:Name="tbApellido"
                      VerticalContentAlignment="Center"/>
+            
             <TextBlock Grid.Row="8"
                        Grid.Column="1"
                        Text="Segundo apellido"
@@ -230,6 +232,7 @@
                      Grid.Column="2"
                      x:Name="tbsegApellido"
                      VerticalContentAlignment="Center"/>
+            
             <TextBlock Grid.Row="10"
                        Grid.Column="1"
                        Text="Rut"
@@ -240,6 +243,7 @@
                      Grid.Column="2"
                      x:Name="tbRut"
                      VerticalContentAlignment="Center"/>
+            
             <TextBlock Grid.Row="12"
                        Grid.Column="1"
                        HorizontalAlignment="Left"
@@ -249,6 +253,7 @@
                      Grid.Column="2"
                      x:Name="tbCorreo"
                      VerticalContentAlignment="Center"/>
+            
             <TextBlock Grid.Row="14"
                        Grid.Column="1"
                        Text="Celular"
@@ -259,6 +264,7 @@
                      Grid.Column="2"
                      x:Name="tbCelular"
                      VerticalContentAlignment="Center"/>
+            
             <TextBlock Grid.Row="16"
                        Grid.Column="1"
                        Text="Clave"
@@ -269,6 +275,7 @@
                      Grid.Column="2"
                      x:Name="tbClave"
                      VerticalContentAlignment="Center"/>
+            
             <TextBlock Grid.Row="18"
                        Grid.Column="1"
                        Text="Cargo"
@@ -281,6 +288,7 @@
                       VerticalAlignment="Center" Height="30"  
                       AutomationProperties.Name="cbCargo"
                       VerticalContentAlignment="Center"/>
+            
             <Label x:Name="Indselec" 
                    Grid.Column="3" 
                    Content="" 

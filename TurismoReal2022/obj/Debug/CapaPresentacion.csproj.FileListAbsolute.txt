@@ -66,3 +66,9 @@ C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vis
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearDisponibilidad.baml
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearVehiculo.g.cs
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearVehiculo.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\FluentValidation.dll
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\FluentValidation.xml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\System.Threading.Tasks.Extensions.xml

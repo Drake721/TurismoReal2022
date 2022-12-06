@@ -7,7 +7,11 @@ using CapaEntidad;
 using CapaNegocio;
 using System.Collections.Generic;
 using MaterialDesignThemes.Wpf;
-
+using System;
+using System.ComponentModel;
+using FluentValidation.Results;
+using TurismoReal2022.Vistas.ValidacionesUsuario;
+using TurismoReal2022.Vistas.ValidacionesDepto;
 
 namespace TurismoReal2022.Vistas
 {
@@ -18,6 +22,8 @@ namespace TurismoReal2022.Vistas
         readonly CN_Comuna objeto_CN_Comuna = new CN_Comuna();
         readonly CN_Region objeto_CN_Region = new CN_Region();
         readonly CN_Disponibilidad objeto_CN_Disponibilidad = new CN_Disponibilidad();
+
+        BindingList<string> errores = new BindingList<string>();
 
         public AgregarDPTO()
         {
@@ -67,7 +73,85 @@ namespace TurismoReal2022.Vistas
         }
         #endregion
 
-        #region VALIDAR CAMPOS VACIOS
+        #region VALIDAR CAMPOS
+
+        public bool tarifamenora()
+        {
+            if (int.TryParse(tbTARIFA.Text.ToString(), out int tarifa))
+            {
+                if (tarifa >= 0 && tarifa <= 999999999)
+                {
+                    return true;
+                }
+                return true;
+
+            }
+            else
+            {
+                try
+                {
+                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                }
+                return false;
+            }
+
+        }
+        public bool nrodptomenora()
+        {
+            if (int.TryParse(tbNRODPTO.Text.ToString(), out int nrodpto))
+            {
+                if (nrodpto >= 0 && nrodpto <= 999999999)
+                {
+                    return true;
+                }
+                return true;
+
+            }
+            else
+            {
+                try
+                {
+                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                }
+                return false;
+            }
+
+        }
+
+        public bool capacidadmenora()
+        {
+            if (int.TryParse(tbCAPACIDAD.Text.ToString(), out int capacidad))
+            {
+                if (capacidad >= 0 && capacidad <= 10)
+                {
+                    return true;
+                }
+                return true;              
+
+            }
+            else
+            {
+                try
+                {
+                    MessageBox.Show("La capacidad no puede ser mayor a 10.");
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("La capacidad no puede ser mayor a 10.");
+                }
+                return false;
+            }
+
+        }
+
         public bool camposLlenos()
         {
             if (tbNombreDPTO.Text == "" || tbTARIFA.Text == "" || tbDIRECCION.Text == "" || tbNRODPTO.Text == "" || tbCAPACIDAD.Text == "" || cbRegion.Text == "" || cbComuna.Text == "" || cbDisponibilidad.Text == "")
@@ -88,11 +172,11 @@ namespace TurismoReal2022.Vistas
         #region crear
         private void Crear(object sender, RoutedEventArgs e)
         {
-            if (camposLlenos() == true)
+            if (camposLlenos() == true && capacidadmenora() == true && nrodptomenora() == true && tarifamenora() == true)
             {
                 int Region = objeto_CN_Region.ID_REGION(cbRegion.Text);
                 int Comuna = objeto_CN_Comuna.ID_COMUNA(cbComuna.Text);
-                int Disponibilidad = objeto_CN_Disponibilidad.ID_DISP(cbDisponibilidad.Text);                
+                int Disponibilidad = objeto_CN_Disponibilidad.ID_DISP(cbDisponibilidad.Text);
                 objeto_CE_Departamento.NOMBRE_DPTO = tbNombreDPTO.Text;
                 objeto_CE_Departamento.TARIFA_DIARIA = int.Parse(tbTARIFA.Text);
                 objeto_CE_Departamento.DIRECCION = tbDIRECCION.Text;
@@ -100,24 +184,42 @@ namespace TurismoReal2022.Vistas
                 objeto_CE_Departamento.CAPACIDAD = int.Parse(tbCAPACIDAD.Text);
                 objeto_CE_Departamento.ID_COMUNA = Comuna;
                 objeto_CE_Departamento.DISPONIBILIDAD = Disponibilidad;
-                objeto_CE_Departamento.IMAGE = tbImagweb.Text;
+                objeto_CE_Departamento.IMAGEN = tbImagweb.Text;
                 objeto_CE_Departamento.IMG = data;
                 objeto_CE_Departamento.IMG1 = data1;
                 objeto_CE_Departamento.IMG2 = data2;
 
-                objeto_CN_Departamento.Insertar(objeto_CE_Departamento);
-                Content = new Departamentos();
+
+
+                ValidacionesDpto validator = new ValidacionesDpto();
+                FluentValidation.Results.ValidationResult resultados = validator.Validate(objeto_CE_Departamento);
+
+                if (resultados.IsValid == false)
+                {
+                    foreach (ValidationFailure item in resultados.Errors)
+                    {
+                        MessageBox.Show("Error", item.ErrorMessage);
+                    }
+                }
+                else
+                {
+
+                    MessageBox.Show("Creado con exito");
+                    objeto_CN_Departamento.Insertar(objeto_CE_Departamento);
+                    Content = new Departamentos();
+                }
+
 
             }
             else
             {
-                MessageBox.Show("Los campos no pueden estar vacios!");
+                MessageBox.Show("Ha ocurrido un error. No se podido crear el usuario, Reintente!");
             }
         }
-        #endregion
+            #endregion
 
-        #region cosultas
-        public void Consultar()
+            #region cosultas
+            public void Consultar()
         {
             var a = objeto_CN_Departamento.Consultar(ID_DPTO);
             var c = objeto_CN_Region.NOMBRE_REGION(a.ID_COMUNA);
@@ -131,7 +233,7 @@ namespace TurismoReal2022.Vistas
             cbRegion.Text = c.NOMBRE_REGION;
             cbComuna.Text = b.NOMBRE_COMUNA;
             cbDisponibilidad.Text = d.DESCR_ESTADO;
-            tbImagweb.Text = a.IMAGE.ToString();
+            tbImagweb.Text = a.IMAGEN.ToString();
 
             ImageSourceConverter imgs = new ImageSourceConverter();
             imagen.Source = (ImageSource)imgs.ConvertFrom(a.IMG);
@@ -147,7 +249,7 @@ namespace TurismoReal2022.Vistas
         #region Modificar
         private void Modificar(object sender, RoutedEventArgs e)
         {
-            if (camposLlenos() == true)
+            if (camposLlenos() == true && capacidadmenora() == true && nrodptomenora() == true && tarifamenora() == true)
             {
                 int Region = objeto_CN_Region.ID_REGION(cbRegion.Text);
                 int Comuna = objeto_CN_Comuna.ID_COMUNA(cbComuna.Text);
@@ -160,7 +262,7 @@ namespace TurismoReal2022.Vistas
                 objeto_CE_Departamento.CAPACIDAD = int.Parse(tbCAPACIDAD.Text);
                 objeto_CE_Departamento.ID_COMUNA = Comuna;
                 objeto_CE_Departamento.DISPONIBILIDAD = Disponibilidad;
-                objeto_CE_Departamento.IMAGE = tbImagweb.Text;
+                objeto_CE_Departamento.IMAGEN = tbImagweb.Text;
                 objeto_CN_Departamento.ActualizarDatos(objeto_CE_Departamento);
                 Content = new Departamentos();
             }
