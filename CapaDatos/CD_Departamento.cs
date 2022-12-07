@@ -104,7 +104,7 @@ namespace CapaDatos
             com.Parameters.AddWithValue("@CAPACIDAD", Departamento. CAPACIDAD);
             com.Parameters.AddWithValue("@ID_COMUNA", Departamento.ID_COMUNA);
             com.Parameters.AddWithValue("@DISPONIBILIDAD", Departamento.DISPONIBILIDAD);
-            com.Parameters.AddWithValue("@image", Departamento.IMAGEN);
+            com.Parameters.AddWithValue("@imagen", Departamento.IMAGEN);
             com.ExecuteNonQuery();
             com.Parameters.Clear();
             con.CerrarConexion();

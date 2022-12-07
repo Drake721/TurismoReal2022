@@ -18,7 +18,7 @@ namespace TurismoReal2022.Vistas
     /// <summary>
     /// Lógica de interacción para Inventario.xaml
     /// </summary>
-    public partial class Inventario : Page
+    public partial class Inventario : UserControl
     {
         public Inventario()
         {

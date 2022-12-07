@@ -11,7 +11,7 @@ namespace TurismoReal2022.Vistas.ValidacionesDepto
         public ValidacionesDpto()
         {
             RuleFor(d => d.NOMBRE_DPTO)
-                .Cascade(CascadeMode.Stop).Length(8, 14)
+                .Cascade(CascadeMode.Stop).Length(8, 100)
                 .WithMessage("El Nombre debe tener un largo entre 8 a 100 caracteres")
                 .NotEmpty().WithMessage("Nombre no puede quedar vacio.");
 

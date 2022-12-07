@@ -115,11 +115,11 @@ namespace TurismoReal2022.Vistas
             {
                 try
                 {
-                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                    MessageBox.Show("El Numero de departamento no puede superar los 9 digitos.");
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                    MessageBox.Show("El Numero de departamento no puede superar los 9 digitos.");
                 }
                 return false;
             }
@@ -130,7 +130,7 @@ namespace TurismoReal2022.Vistas
         {
             if (int.TryParse(tbCAPACIDAD.Text.ToString(), out int capacidad))
             {
-                if (capacidad >= 0 && capacidad <= 10)
+                if (capacidad >= 0 && capacidad <= 100)
                 {
                     return true;
                 }
@@ -141,11 +141,11 @@ namespace TurismoReal2022.Vistas
             {
                 try
                 {
-                    MessageBox.Show("La capacidad no puede ser mayor a 10.");
+                    MessageBox.Show("La capacidad no puede ser mayor a 100.");
                 }
                 catch (OverflowException)
                 {
-                    MessageBox.Show("La capacidad no puede ser mayor a 10.");
+                    MessageBox.Show("La capacidad no puede ser mayor a 100.");
                 }
                 return false;
             }
@@ -263,12 +263,33 @@ namespace TurismoReal2022.Vistas
                 objeto_CE_Departamento.ID_COMUNA = Comuna;
                 objeto_CE_Departamento.DISPONIBILIDAD = Disponibilidad;
                 objeto_CE_Departamento.IMAGEN = tbImagweb.Text;
+
                 objeto_CN_Departamento.ActualizarDatos(objeto_CE_Departamento);
                 Content = new Departamentos();
+
+                ValidacionesDpto validator = new ValidacionesDpto();
+                FluentValidation.Results.ValidationResult resultados = validator.Validate(objeto_CE_Departamento);
+
+                if (resultados.IsValid == false)
+                {
+                    foreach (ValidationFailure item in resultados.Errors)
+                    {
+                        MessageBox.Show("Error", item.ErrorMessage);
+                    }
+                }
+                else
+                {
+
+                    MessageBox.Show("Modificado con exito");
+                    objeto_CN_Departamento.ActualizarDatos(objeto_CE_Departamento);
+                    Content = new Departamentos();
+                }
+
+
             }
             else
             {
-                MessageBox.Show("Los campos a modificar no pueden quedar vacios");
+                MessageBox.Show("Ha ocurrido un error. No se podido modificar el usuario, Reintente!");
             }
             if (imagenSubida == true)
             {

@@ -96,7 +96,7 @@ namespace TurismoReal2022.Vistas
         public string patron = "ENCRIPTA";
 
         #region crear
-        private async void Crear(object sender, RoutedEventArgs e)
+        private void Crear(object sender, RoutedEventArgs e)
         {
             
             if(camposLlenos()== true && tbClave.Text !="" && celularmenora() == true)
