@@ -18,21 +18,21 @@ namespace TurismoReal2022.Vistas.ValidacionesDepto
             RuleFor(d => d.DIRECCION)
                 .Cascade(CascadeMode.Stop).Length(3, 40)
                 .WithMessage("La direccion deben tener un largo entre 8 a 20 caracteres")
-                .NotEmpty().WithMessage("Los nombres no puede quedar vacio.");
+                .NotEmpty().WithMessage("La direccion no puede quedar vacio.");
 
             RuleFor(d => d.TARIFA_DIARIA)
                 .Cascade(CascadeMode.Stop)
                 .GreaterThan(5)
                 .LessThan(1000000000)
                 .WithMessage("El campo no puede contener mas de 9 digitos")
-                .NotEmpty().WithMessage("El apellido no puede quedar vacio.");
+                .NotEmpty().WithMessage("El valor de la tarifa no puede quedar vacio.");
 
             RuleFor(x => x.NRO_DPTO)
                 .Cascade(CascadeMode.Stop)
                 .GreaterThan(0)
                 .LessThan(1000000000)
                 .WithMessage("El campo no puede contener mas de 9 digitos")
-                .NotEmpty().WithMessage("El apellido no puede quedar vacio.");
+                .NotEmpty().WithMessage("El Numero de departamento no puede quedar vacio.");
 
         }
 

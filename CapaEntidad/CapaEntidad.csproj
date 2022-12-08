@@ -47,6 +47,7 @@
     <Compile Include="CE_Disponibilidad.cs" />
     <Compile Include="CE_Inventario_DPTO.cs" />
     <Compile Include="CE_MANTENIMIENTO.cs" />
+    <Compile Include="CE_Objeto.cs" />
     <Compile Include="CE_Region.cs" />
     <Compile Include="CE_Usuario.cs" />
     <Compile Include="CE_Vehiculo.cs" />

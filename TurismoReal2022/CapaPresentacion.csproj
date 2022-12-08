@@ -137,6 +137,9 @@
     <Compile Include="Vistas\CrearMantenimiento.xaml.cs">
       <DependentUpon>CrearMantenimiento.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\CrearObjeto.xaml.cs">
+      <DependentUpon>CrearObjeto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\CrearVehiculo.xaml.cs">
       <DependentUpon>CrearVehiculo.xaml</DependentUpon>
     </Compile>
@@ -151,6 +154,9 @@
     </Compile>
     <Compile Include="Vistas\Mantenimiento.xaml.cs">
       <DependentUpon>Mantenimiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\Objeto.xaml.cs">
+      <DependentUpon>Objeto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Vistas\Usuarios.xaml.cs">
       <DependentUpon>Usuarios.xaml</DependentUpon>
@@ -247,6 +253,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Vistas\CrearObjeto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Vistas\CrearVehiculo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -264,6 +274,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Mantenimiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Objeto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

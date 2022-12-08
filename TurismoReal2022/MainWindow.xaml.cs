@@ -64,7 +64,10 @@ namespace TurismoReal2022
             mainWindow.Show();
             this.Close();
         }
-
+        private void Inventario_Click (object sender, RoutedEventArgs e)
+        {
+            DataContext = new Inventario();
+        }
 
 
 

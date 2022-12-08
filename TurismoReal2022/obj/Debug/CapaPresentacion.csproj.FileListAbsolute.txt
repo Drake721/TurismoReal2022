@@ -73,3 +73,7 @@ C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\Flu
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\bin\Debug\System.Drawing.Common.xml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearObjeto.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Objeto.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearObjeto.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Objeto.baml

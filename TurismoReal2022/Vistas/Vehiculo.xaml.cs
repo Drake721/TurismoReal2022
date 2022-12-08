@@ -17,11 +17,12 @@ namespace TurismoReal2022.Vistas
             InitializeComponent();
             CargarDatos();
         }
-        #endregion
+
         private void BtnRegresa(object sender, RoutedEventArgs e)
         {
             Content = new Mantenimiento();
         }
+        #endregion
 
         #region cargar usuarios
         void CargarDatos()
@@ -30,6 +31,7 @@ namespace TurismoReal2022.Vistas
 
         }
         #endregion
+
         #region agregar
         private void Agregar(object sender, RoutedEventArgs e)
         {
@@ -38,6 +40,7 @@ namespace TurismoReal2022.Vistas
             ventana.BtnCrear.Visibility = Visibility.Visible;
         }
         #endregion
+
         #region consultar
         private void Consultar(object sender, RoutedEventArgs e)
         {
@@ -54,6 +57,7 @@ namespace TurismoReal2022.Vistas
        
         }
         #endregion
+
         #region Actualizar
         private void Actualizar(object sender, RoutedEventArgs e)
         {
@@ -70,6 +74,7 @@ namespace TurismoReal2022.Vistas
             ventana.BtnModificar.Visibility = Visibility.Visible;
         }
         #endregion
+
         #region eliminar
         private void Eliminar(object sender, RoutedEventArgs e)
         {

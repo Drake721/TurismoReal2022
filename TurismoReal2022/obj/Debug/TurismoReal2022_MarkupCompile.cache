@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\App.xaml
-15-2023415521
+17809425762
 
-22-2137040834
+24843702999
 32-132846128
-Login.xaml;MainWindow.xaml;Vistas\AgregarDPTO.xaml;Vistas\agregarUsuario.xaml;Vistas\Cargo.xaml;Vistas\CrearCargo.xaml;Vistas\CrearDisponibilidad.xaml;Vistas\CrearMantenimiento.xaml;Vistas\CrearVehiculo.xaml;Vistas\Departamentos.xaml;Vistas\Estado.xaml;Vistas\Inventario.xaml;Vistas\Mantenimiento.xaml;Vistas\Usuarios.xaml;Vistas\Vehiculo.xaml;
+Login.xaml;MainWindow.xaml;Vistas\AgregarDPTO.xaml;Vistas\agregarUsuario.xaml;Vistas\Cargo.xaml;Vistas\CrearCargo.xaml;Vistas\CrearDisponibilidad.xaml;Vistas\CrearMantenimiento.xaml;Vistas\CrearObjeto.xaml;Vistas\CrearVehiculo.xaml;Vistas\Departamentos.xaml;Vistas\Estado.xaml;Vistas\Inventario.xaml;Vistas\Mantenimiento.xaml;Vistas\Objeto.xaml;Vistas\Usuarios.xaml;Vistas\Vehiculo.xaml;
 images\tr logo.png
-True
+False
 

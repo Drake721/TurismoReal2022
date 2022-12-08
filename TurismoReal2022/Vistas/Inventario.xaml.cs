@@ -24,5 +24,12 @@ namespace TurismoReal2022.Vistas
         {
             InitializeComponent();
         }
+
+        private void ObjetoClick(object sender, RoutedEventArgs e)
+        {
+            Objeto ventana = new Objeto();
+            Frameinventario.Content = ventana;
+        }
+
     }
 }

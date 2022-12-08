@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TurismoReal2022.Vistas"
              mc:Ignorable="d" 
-             Height="1080"
-             Width="1440"
+             Height="509"
+             Width="693"
              Background="Transparent">
 
     <UserControl.Resources>
@@ -234,9 +234,212 @@
                 <GradientStop Color="Red" Offset="0.498"/>
             </LinearGradientBrush>
         </Border.BorderBrush>
-        <Grid>
 
-        
+        <Grid Name="GridMantenimiento">
+            <!--#Region COL/fila-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition/>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="63*" />
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="32*" />
+                <RowDefinition Height="31*"/>
+                <RowDefinition Height="63*" />
+                <RowDefinition Height="63*" />
+                <RowDefinition Height="63*" />
+                <RowDefinition Height="63*" />
+                <RowDefinition Height="63*" />
+                <RowDefinition Height="63*" />
+            </Grid.RowDefinitions>
+            <!--#endRegion-->
+
+            <!--#Region fila titulo -->
+            <TextBlock
+                    Text="Inventario"
+                           Foreground="White"
+                           FontWeight="Bold"
+                           FontSize="50"
+                           FontFamily="Montserrat"
+                           Grid.ColumnSpan="6"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Grid.Column="1"/>
+            <!--#endRegion fila titulo-->
+
+            <!--#Region Otros  -->
+
+            <TextBlock Grid.Row="1"
+                        Text="Administrar Objetos"
+                       Foreground="White"
+                       FontSize="20"
+                       FontFamily="Montserrat" 
+                       Grid.Column="5"
+                       Grid.ColumnSpan="2"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"/>
+
+            <Button Style="{DynamicResource ButtonBUSCAR}" x:Name="SecObj"
+                                               Background="Green"
+                        BorderBrush="green"
+                        Grid.Column="5"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                    Grid.RowSpan="2"
+                        Margin="20,0,0,0"
+                        Cursor="Hand"
+                        Width="140"
+                        Height="40"
+                        HorizontalAlignment="Left"
+                        Click="ObjetoClick"
+                        >
+                <TextBlock Text="Objeto"
+                           
+                           Foreground="White"
+                           FontSize="20"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </Button>
+            <!--#endRegion-->
+
+            <!--#region Seccion mantenimiento-->
+
+            <TextBlock Grid.Row="1"
+                        Text="Realiza el inventario a los departamento "
+                       Foreground="White"
+                       FontSize="20"
+                       FontFamily="Montserrat" 
+                       Grid.Column="0"
+                       Grid.ColumnSpan="5"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       Margin="20,0,0,0"/>
+
+
+
+            <Button Style="{DynamicResource ButtonBUSCAR}" x:Name="CrearInventario"
+                        Background="Green"
+                        BorderBrush="green"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Grid.ColumnSpan="3"
+                    Grid.RowSpan="2"
+                        Margin="20,5,0,5"
+                        Cursor="Hand"
+                        Width="200"
+                        Height="40"
+                        HorizontalAlignment="Left"
+                        
+                        >
+                <TextBlock Text="Crear Inventario"
+                           Foreground="White"
+                           FontSize="20"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"/>
+            </Button>
+
+
+
+
+            <!--#endregion-->
+
+
+            <!--#Region DataGrid-->
+            <TextBlock Grid.Row="5"
+                    Text="Tabla de mantenimientos activos"
+                       Grid.ColumnSpan=" 5"
+                       Foreground="White"
+                       FontSize="25"
+                       FontFamily="Montserrat" 
+                       Grid.Column="1"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"/>
+
+            <DataGrid Style="{DynamicResource DataGridStyle}" Grid.Row="5"
+                          Grid.Column="0"
+                          Grid.RowSpan="5"
+                          Grid.ColumnSpan="8"
+                          x:Name="GridDatos"
+                          AutoGenerateColumns="False"
+                          Background="GhostWhite"
+                          Foreground="Black"
+                          FontSize="15"
+                          CanUserAddRows="False"
+                          CanUserResizeColumns="True"
+                          CanUserResizeRows="False"
+                          CanUserSortColumns="False"
+                          RowBackground="Transparent"
+                          HeadersVisibility="Column"
+                          GridLinesVisibility="Horizontal"
+                          HorizontalGridLinesBrush="Maroon" Margin="0,126,0,0">
+
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Administrador"
+                                                Width="170">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DockPanel>
+                                    <Button Content="Consultar"
+                                            x:Name="BtnConsultarMant"
+                                            Background="green"
+                                            Width="80"
+                                            BorderBrush="Transparent"
+                                            Foreground="White"
+                                            Style="{DynamicResource ButtonBUSCAR}"
+                                            
+                                            CommandParameter="{Binding id_mant}"/>
+                                    <Button Content="Modificar"
+                                            x:Name="BtnModificarMant"
+                                            Background="blue"
+                                            Foreground="White"
+                                            Width="80"
+                                            BorderBrush="Transparent"
+                                            Style="{DynamicResource ButtonBUSCAR}"
+                                            
+                                            CommandParameter="{Binding id_mant}"/>
+                                </DockPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Nombre DPTO"
+                                        Width="*"
+                                        Binding="{Binding nombre_dpto}"/>
+                    <DataGridTextColumn Header="Descripcion Mantencion"
+                                        Width="*"
+                                        Binding="{Binding descripcion_mant}"/>
+                    <DataGridTextColumn Header="Fecha Inicio"
+                                        Width="*"
+                                        Binding="{Binding fecha_inicio}"/>
+                    <DataGridTextColumn Header=" Fecha_Termino"
+                                        Width="*"
+                                        Binding="{Binding fecha_termino}"/>
+                    <DataGridTextColumn Header="Costo"
+                                        Width="*"
+                                        Binding="{Binding costo_mantencion}"/>
+                    <DataGridTextColumn Header="Disponibilidad"
+                                        Width="*"
+                                        Binding="{Binding descr_estado}"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+            <!--#endRegion-->
+            <!--#region FrameMantenimiento-->
+            <Frame x:Name="Frameinventario"
+                       Grid.Column="0"
+                       Grid.Row="0"
+                       Grid.RowSpan="11"
+                       Grid.ColumnSpan="8"/>
+
+            <!--#endregion-->
+
         </Grid>
     </Border>
 </UserControl>
