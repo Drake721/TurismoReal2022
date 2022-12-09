@@ -116,7 +116,7 @@ namespace CapaDatos
         {
             SqlDataAdapter da = new SqlDataAdapter("SP_I_cargarinventario", con.AbrirConexion());
             da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("@Id_dpto", SqlDbType.Int).Value = Id_dpto;
+            da.SelectCommand.Parameters.Add("Id_dpto", SqlDbType.Int).Value = Id_dpto;
             DataSet ds = new DataSet();
             ds.Clear();
             da.Fill(ds);

@@ -26,7 +26,6 @@ namespace TurismoReal2022.Vistas
     /// </summary>
     public partial class Asignar_inventario : Page
     {
-        //readonly CN_Departamento objeto_CN_Departamento = new CN_Departamento();
         readonly CE_Inventario_DPTO objeto_CE_Inventario_DPTO = new CE_Inventario_DPTO();
         readonly CN_Inventario objeto_CN_Inventario = new CN_Inventario();
         readonly CN_Objeto objeto_CN_Objeto = new CN_Objeto();

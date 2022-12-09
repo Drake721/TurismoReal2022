@@ -93,6 +93,12 @@ namespace TurismoReal2022.Vistas
             Frameinventario.Content = ventana;
             ventana.BtnCrear.Visibility = Visibility.Visible;
         }
+
+        private void invfilt(object sender, RoutedEventArgs e)
+        {
+            InventarioFiltrado ventana = new InventarioFiltrado();
+            Frameinventario.Content = ventana;
+        }
         #endregion
 
         /*#region buscar

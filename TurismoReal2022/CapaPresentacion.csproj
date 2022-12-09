@@ -155,6 +155,9 @@
     <Compile Include="Vistas\Inventario.xaml.cs">
       <DependentUpon>Inventario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\InventarioFiltrado.xaml.cs">
+      <DependentUpon>InventarioFiltrado.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Mantenimiento.xaml.cs">
       <DependentUpon>Mantenimiento.xaml</DependentUpon>
     </Compile>
@@ -277,6 +280,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\Inventario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\InventarioFiltrado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
