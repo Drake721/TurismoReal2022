@@ -125,6 +125,9 @@
     <Compile Include="Vistas\agregarUsuario.xaml.cs">
       <DependentUpon>agregarUsuario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Asignar inventario.xaml.cs">
+      <DependentUpon>Asignar inventario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Cargo.xaml.cs">
       <DependentUpon>Cargo.xaml</DependentUpon>
     </Compile>
@@ -234,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Vistas\agregarUsuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vistas\Asignar inventario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

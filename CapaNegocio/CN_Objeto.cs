@@ -70,6 +70,13 @@ namespace CapaNegocio
 
         #endregion
 
-        
+        #region listarRegion
+        public List<string> ListarObjeto()
+        {
+            return objDatos.ObtenerObjetos();
+        }
+        #endregion
+
+
     }
 }

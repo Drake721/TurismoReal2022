@@ -77,3 +77,5 @@ C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vis
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Objeto.g.cs
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\CrearObjeto.baml
 C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Objeto.baml
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Asignar inventario.g.cs
+C:\Users\draco\OneDrive\Escritorio\TurismoReal2022\TurismoReal2022\obj\Debug\Vistas\Asignar inventario.baml

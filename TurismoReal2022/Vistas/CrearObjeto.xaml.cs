@@ -1,5 +1,6 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -29,6 +30,84 @@ namespace TurismoReal2022.Vistas
 
 
         #region VALIDAR CAMPOS VACIOS
+
+        public bool valor()
+        {
+            if (int.TryParse(tbValor.Text.ToString(), out int valor))
+            {
+                if (valor >= 0 && valor <= 999999999)
+                {
+                    return true;
+                }
+                return true;
+
+            }
+            else
+            {
+                try
+                {
+                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("El valor de la tarifa no puede superar los 9 digitos.");
+                }
+                return false;
+            }
+
+        }
+        public bool Codigo()
+        {
+            if (int.TryParse(tbCodigo.Text.ToString(), out int cod))
+            {
+                if (cod >= 0 && cod <= 999999999)
+                {
+                    return true;
+                }
+                return true;
+
+            }
+            else
+            {
+                try
+                {
+                    MessageBox.Show("El Numero de departamento no puede superar los 9 digitos.");
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("El Numero de departamento no puede superar los 9 digitos.");
+                }
+                return false;
+            }
+
+        }
+
+        public bool cantidad()
+        {
+            if (int.TryParse(tbcanti.Text.ToString(), out int cantidad))
+            {
+                if (cantidad >= 0 && cantidad <= 100)
+                {
+                    return true;
+                }
+                return true;
+
+            }
+            else
+            {
+                try
+                {
+                    MessageBox.Show("La capacidad no puede ser mayor a 100.");
+                }
+                catch (OverflowException)
+                {
+                    MessageBox.Show("La capacidad no puede ser mayor a 100.");
+                }
+                return false;
+            }
+
+        }
+
         public bool camposLlenos()
         {
             if (tbCodigo.Text == "" || tbnomObj.Text == "" || tbcanti.Text == "" || tbValor.Text == "")
@@ -48,7 +127,7 @@ namespace TurismoReal2022.Vistas
         #region crear
         private void Crear(object sender, RoutedEventArgs e)
         {
-            if (camposLlenos() == true)
+            if (camposLlenos() == true && cantidad() == true && Codigo() == true && valor() == true)
             {
                 objeto_CE_Objeto.Codigo_objeto = int.Parse(tbCodigo.Text); 
                 objeto_CE_Objeto.Nombre_objeto = tbnomObj.Text;
@@ -62,7 +141,7 @@ namespace TurismoReal2022.Vistas
             }
             else
             {
-                MessageBox.Show("Los campos no pueden estar vacios!");
+                MessageBox.Show("Error al momento de crear objeto, reintente!");
             }
         }
         #endregion
@@ -83,7 +162,7 @@ namespace TurismoReal2022.Vistas
         #region Modificar
         private void Modificar(object sender, RoutedEventArgs e)
         {
-            if (camposLlenos() == true)
+            if (camposLlenos() == true && cantidad() == true && Codigo() == true && valor() == true)
             {
                 
                 objeto_CE_Objeto.Id_obj = id_obj;
@@ -97,7 +176,7 @@ namespace TurismoReal2022.Vistas
             }
             else
             {
-                MessageBox.Show("Los campos a modificar no pueden quedar vacios");
+                MessageBox.Show("Error al momento de crear objeto, reintente!");
             }
         }
         #endregion

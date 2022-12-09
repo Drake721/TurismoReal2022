@@ -46,6 +46,7 @@
     <Compile Include="CD_Conexion.cs" />
     <Compile Include="CD_Departamento.cs" />
     <Compile Include="CD_Disponibilidad.cs" />
+    <Compile Include="CD_Inventario.cs" />
     <Compile Include="CD_Mantencion.cs" />
     <Compile Include="CD_Objeto.cs" />
     <Compile Include="CD_Region.cs" />

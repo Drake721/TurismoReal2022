@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CN_Inventario.cs" />
     <Compile Include="CN_Objeto.cs" />
     <Compile Include="CN_Cargo.cs" />
     <Compile Include="CN_Comuna.cs" />

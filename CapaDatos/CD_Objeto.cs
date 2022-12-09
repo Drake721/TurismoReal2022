@@ -150,6 +150,28 @@ namespace CapaDatos
         }
         #endregion
 
+        #region listarObjetos
+        public List<string> ObtenerObjetos()
+        {
+            SqlCommand com = new SqlCommand()
+            {
+                Connection = con.AbrirConexion(),
+                CommandText = "SP_U_cargarObjetos",
+                CommandType = CommandType.StoredProcedure,
+            };
+            SqlDataReader reader = com.ExecuteReader();
+            List<string> lista = new List<string>();
+            while (reader.Read())
+            {
+                lista.Add(Convert.ToString(reader["nombre_objeto"]));
+            }
+            con.CerrarConexion();
+
+            return lista;
+
+        }
+        #endregion
+
 
 
     }
